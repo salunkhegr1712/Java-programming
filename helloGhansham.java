@@ -1,5 +1,7 @@
 
 public class helloGhansham {
+    // the string args are the extra command line arguments which you can pass after  writing java className x y z a b 
+    // x y z a b all are arguments which are stored inside the args array 
     public static void main(String[] args) {
         // system.out is basically focusing on the output of the file 
         System.out.print("hello ghansham salunkhe here");
