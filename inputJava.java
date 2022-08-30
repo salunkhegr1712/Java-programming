@@ -27,6 +27,8 @@ public class inputJava {
         // getClass and getSimpleName
         System.out.println(((Object)c).getClass().getSimpleName());
         //integer
+        // after using the input so you always have to close the object w
+        abc.close();
 
     }
 }
