@@ -1,0 +1,140 @@
+# Widening
+
+Widening, also known as upcasting, is a conversion that implictly takes place in the following situations -
+Widening takes place when a smaller primitive type value is automatically accommodated in a larger/wider primitive data type.
+Widening also takes place when a reference variable of a subclass is automatically accommodated in a reference variable 
+of its superclass.
+
+Widening a smaller primitive value to a bigger primitive type.
+
+Widening takes place when a smaller primitive type value is automatically accommodated in a larger/wider primitive data type. Let us see an example.
+
+//Java - Example of Widening a smaller primitive value to a larger primitive type
+
+            class A
+            {
+            public static void main(String... ar)
+            {
+                byte b=10;
+
+                short s= b;	//byte value is widened to short
+                int i=b;	//byte value is widened to int
+                long l=b;	//byte value is widened to long
+                float f=b;	//byte value is widened to float
+                double d=b;	//byte value is widened to double
+
+                System.out.println("short value : "+ s);
+                System.out.println("int value : "+ i);
+                System.out.println("long value : "+ l);
+                System.out.println("float value : "+ f);
+                System.out.println("double value : "+ d);
+            }
+            }
+
+
+Output-
+
+            short value : 10
+            int value : 10
+            long value : 10
+            float value : 10.0
+            double value : 10.0
+            In the preceding code, we have widened a smaller byte value to several larger primitive values like byte, short, int, long and float.
+
+
+Widening a subclass object reference to a wider superclass object reference.
+
+Widening also takes place when a subclass object reference is assigned to a wider superclass object reference. This is also known as upcasting a subclass reference to its superclass reference.
+
+//Java - Example of Widening a subclass object reference to a wider superclass object reference
+
+code:
+                    //Superclass
+                    class A
+                    {
+                    public void message()
+                    {
+                        System.out.println("message from A");
+                    }
+                    }
+
+
+                    //Subclass
+                    class B extends A
+                    {
+                    public void message()
+                    {
+                        System.out.println("message from B");
+                    }
+
+                    public static void main(String... ar)
+                    {
+                        B b = new B();
+                        A a = b;   //reference of a subclass(B) type is widened to a reference of superclass(A) type.
+                        a.message();
+                    }
+                    }
+
+
+Output-
+
+                    Message from B
+                    In the previous code, we have created a class A by extending a class B, hence, A is a superclass and B is its subclass. 
+                    The method message() of superclass A is overridden in its subclass B.
+                    Next, we have created an object of subclass B, which is assigend to its reference, b.
+                    This subclass(B) reference, b is widened/upcasted and assigned to a superclass(A) reference, a.
+
+
+#Narrowing
+
+Narrowing, also known as downcasting/casting, is a conversion that is explictly performed in the following situations -
+Narrowing a wider/bigger primitive type value to a smaller primitive type value.
+Narrowing a superclass reference to a subclass reference, during inheritance.
+
+
+Narrowing a bigger primitive value to a small primitive value.
+
+Narrowing is explictly performed when a wider/bigger primitive type value is assigned to a smaller primitive type value. 
+This also known as downcasting/casting a bigger primitive value to a small primitive value. Let us see an example.
+
+//Java - Example of narrowing a bigger primitive value to a small primitive value
+
+code :
+
+                class A
+                {
+                public static void main(String... ar)
+                {
+                    double d =10.5;
+
+                    byte b = (byte)d;		//Narrowing double to byte 
+                    short s= (short)d;		//Narrowing double to short 
+                    int i= (int)d;			//Narrowing double to int 
+                    long l= (long)d;		//Narrowing double to long
+                    float f= (float)d;		//Narrowing double to float 
+                
+
+                    System.out.println("Original double value : " +d);
+                    System.out.println("Narrowing double value to short : "+ s);
+                    System.out.println("Narrowing double value to int : "+ i);
+                    System.out.println("Narrowing double value to long : "+ l);
+                    System.out.println("Narrowing double value to float : "+ f);
+                    System.out.println("Narrowing double value to byte : "+ b);
+                }
+                }
+
+
+Output-
+                Original double value : 10.5
+                Narrowing double value to short : 10
+                Narrowing double value to int : 10
+                Narrowing double value to long : 10
+                Narrowing double value to float : 10.5
+                Narrowing double value to byte : 10
+                In the preceding code, we have explictly narrowed a biggerdouble value to several smaller primitive values like byte, 
+                short, int, long and float by casting a double value.
+
+
+
+
+Narrowing a superclass object reference to subclass object reference.
