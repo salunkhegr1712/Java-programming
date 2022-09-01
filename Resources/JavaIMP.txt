@@ -1,0 +1,5 @@
+
+if you get massage like Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+use following command in terminal and you will get free from that message :)
+
+_SILENT_JAVA_OPTIONS=$_JAVA_OPTIONS && unset _JAVA_OPTIONS &&  alias java=java $_SILENT_JAVA_OPTIONS
