@@ -36,14 +36,23 @@ public class formatter {
         // so we left with last and that is precision and it is came to play for the float number or values
         // flags will work same for float as they work for int 
         float f=123.4545f;
-        System.out.printf("%6f\n",f);
-        // width=> 6 conversion => float 
-        System.out.printf("%6.2f\n",f);
-        System.out.printf("%6.4f\n",f);
+        // System.out.printf("%6f\n",f);
+        // // width=> 6 conversion => float 
+        // System.out.printf("%6.2f\n",f);
+        // System.out.printf("%6.4f\n",f);
         // 123.454498
         // 123.45
         // 123.4545 and such how we can use the format in the printf 
         // width=> 6 precision=>3 conversion=>f;
 
+        // both system.out.printf() and system.out.format works same  
+        System.out.format("%6f\n",f);
+        // width=> 6 conversion => float 
+        System.out.format("%6.2f\n",f);
+        System.out.format("%6.4f\n",f);
+        // same output 
+        // 123.454498
+        // 123.45
+        // 123.4545
     }
 }
