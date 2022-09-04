@@ -53,6 +53,10 @@ public class formatter {
         // same output 
         // 123.454498
         // 123.45
-        // 123.4545
+        // 123.4545'
+        float val=123.4_456f;
+        float v1al=0x4_3;
+        long c=999_99__99l;
+
     }
 }
