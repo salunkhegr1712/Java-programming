@@ -1,0 +1,36 @@
+   Regular expression                   Description 
+        
+        .                         true if : any character 
+        [abc]                     true if : Any character which is in abc
+        [abc][vc]                 true if : first character is in abc and second will be in vc
+        [^abc]                    true if : any character except abc
+        [a-zA-z0-9]               true if : any character is between range of (a to z) or (A to Z) or (0 to 9)
+        A|B                       true if : character is A or B
+        XY                        true if : characters are XY
+
+
+Meta Character                            	Description
+
+
+      \d	                     Any digit, short for [0-9]
+      \D	                     A non-digit, short for [^0-9]
+      \s	                     A whitespace character, short for [ tnx0brf]
+      \S	                     A non-whitespace character, for short for [^s]
+      \w	                     A word character, short for [a-zA-Z_0-9]
+      \W	                     A non-word character [^w]
+      \S+	                     Several non-whitespace characters
+      \b	                     Matches a word boundary. A word character is [a-zA-Z0-9_] and b matches its bounderies.
+
+      in coding part in matches("\\d") as \n is escape sequence and \\ meta character 
+
+
+Quantisers  
+
+Regular Expression	                  Description
+
+      x?	x                            occurs once or not at all
+      X*	X                            occurs zero or more times
+      X+	X                            occurs one or more times
+      X{n}	                          X occurs exactly n times
+      X{n,}	                          X occurs n or more times
+      X{n,m}         	              X occurs at least n times but not more than m times
