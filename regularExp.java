@@ -28,9 +28,9 @@ public class regularExp {
 
         // System.out.println("abc".matches("."));
 
-        // to check between two or three outcome use | 
-        // System.out.println("a".matches("A|%")); //false 
-        // System.out.println("%".matches("A|%")); //true
+        // to check between two or three outcome use | it is just exactly same as the []
+        // System.out.println("a".matches("[A%]")); //false 
+        // System.out.println("%".matches("[A%]")); //true
 // 
         // if you want to search in range 
         // System.out.println("Grs17".matches("G|r|s|1|7")); // false as it only check for single character 
@@ -73,7 +73,7 @@ public class regularExp {
         // System.out.println(" ".matches("\\w")); //false
         // System.out.println("%".matches("\\w")); //false
 
-        // // \w true if character is not a digit or alphabet
+        // // \W true if character is not a digit or alphabet
         // System.out.println("1".matches("\\W")); //false
         // System.out.println("a".matches("\\W")); //false 
         // System.out.println(" ".matches("\\W")); //true
@@ -106,25 +106,23 @@ public class regularExp {
         // System.out.println(zz.matches("[a-zA-Z0-9]*")); //true 
         // System.out.println(zz.matches("[a-zA-Z0-9]+")); //true 
 
-        // both * and + will produce similar outcome 
-
         // if you want to check suffix prefix or substring of string 
-        zz="ghanshamsalunkhe@gmail.com";
-        System.out.println(zz.matches("sham.*")); //false
+        // zz="ghanshamsalunkhe@gmail.com";
+        // System.out.println(zz.matches("sham.*")); //false
 
         // FOR prefix 
-        System.out.println(zz.matches("ghansham.*")); //true
+        // System.out.println(zz.matches("ghansham.*")); //true
         // sham +.* any character after sham 
         // intermediate substring 
-        System.out.println(zz.matches(".*sham.*")); //TRUE
+        // System.out.println(zz.matches(".*sham.*")); //TRUE
 
         // FOR suffix
         // it is very easy and good approach when you want to deal with string questions 
-        System.out.println(zz.matches(".*com")); //true 
+        // System.out.println(zz.matches(".*com")); //true 
 
         // also toverify that there shuould be no symbol before @
-        System.out.println(zz.matches("[a-z].*@.*"));//true 
-        System.out.println("#A@gmail.com".matches("[a-z0-9].*@.*"));//false 
+        // System.out.println(zz.matches("[a-z].*@.*"));//true 
+        // System.out.println("#A@gmail.com".matches("[a-z0-9].*@.*"));//false 
 
         // string operations become far more eassy with use of java funcitonalities 
     }

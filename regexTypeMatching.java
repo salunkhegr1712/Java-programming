@@ -5,7 +5,7 @@ public class regexTypeMatching {
     public static void main(String args[]){
         // String s="1007";
         // System.out.println("hello World");
-
+        // always try to go for + instead of * as * also containt 0 and + start with atleast single element 
         // the regular expressions are quite handy when you try to use it for string pattern and
         // finding substring and now also usefull in finding type of number string
         // boolean a=s.matches("[0-1]*");

@@ -105,6 +105,8 @@ public class stringsMethods {
         String c=String.valueOf(a);
         System.out.println(((Object)c).getClass().getSimpleName());
         System.out.println(c);
+        String mm="hkbhdk";
+        System.out.println(mm.charAt(4));
         // String
         // 10120023
 

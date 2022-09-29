@@ -1,9 +1,9 @@
    Regular expression                   Description 
         
         .                         true if : any character 
-        [abc]                     true if : Any character which is in abc
-        [abc][vc]                 true if : first character is in abc and second will be in vc
-        [^abc]                    true if : any character except abc
+        [abc]                     true if : Any character which is a or b or c
+        [abc][vc]                 true if : first character is a or b or c and second will be v or c
+        [^abc]                    true if : any character except a or b or c 
         [a-zA-z0-9]               true if : any character is between range of (a to z) or (A to Z) or (0 to 9)
         A|B                       true if : character is A or B
         XY                        true if : characters are XY
@@ -26,11 +26,11 @@ Meta Character                            	Description
 
 Quantisers  
 
-Regular Expression	                  Description
+Regular Expression	                        Description
 
-      x?	x                            occurs once or not at all
-      X*	X                            occurs zero or more times
-      X+	X                            occurs one or more times
-      X{n}	                          X occurs exactly n times
-      X{n,}	                          X occurs n or more times
-      X{n,m}         	              X occurs at least n times but not more than m times
+      x?	                              occurs once or not at all
+      X*	                              occurs zero or more times
+      X+	                              occurs one or more times
+      X{n}	                              X occurs exactly n times
+      X{n,}	                              X occurs n or more times
+      X{n,m}         	                  X occurs at least n times but not more than m times
