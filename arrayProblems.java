@@ -60,11 +60,11 @@ public class arrayProblems {
         
 
         // for visualization of rotation we are going to write for each loops 
-        System.out.println("elements inside the array : ");
-        for( int x:arr){
-            System.out.print(" " + x+" " );
-        }
-        System.out.println();
+        // System.out.println("elements inside the array : ");
+        // for( int x:arr){
+        //     System.out.print(" " + x+" " );
+        // }
+        // System.out.println();
 
         // rotation code left rotation of array 
         // int z=0;
@@ -93,5 +93,138 @@ public class arrayProblems {
 
         // problem : Deletion in array 
         
+
+        // problem 6 : insertion in  the array 
+
+        // printing elements before insertion 
+        // System.out.println("array representation before insertion : ");
+        // for( int x:arr){
+        //     System.out.print(" " + x+" " );
+        // }
+        // System.out.println();
+
+        // // main code which do the insertion part inside the array 
+
+        // int index=3;
+        // int z=0;
+        // int val=10;
+        // z=arr[index];
+        // arr[index]=val;
+        // int k=0;
+        // for(int i=index+1;i<arr.length;i++){
+        //     k=arr[i];
+        //     arr[i]=z;
+        //     z=k;
+        // }
+
+        // // printing elements after insertion 
+        // System.out.println("array representation after insertion : ");
+        // for( int x:arr){
+        //     System.out.print(" " + x+" " );
+        // }
+        // System.out.println();
+
+
+
+        // problem 7 : deleting the element inside the array 
+
+        // printing elements before insertion 
+        // System.out.println("array representation before insertion : ");
+        // for( int x:arr){
+        //     System.out.print(" " + x+" " );
+        // }
+        // System.out.println();
+
+        // // main code which do the Deletion part inside the array 
+
+        // int index=3;
+        // int z=0;
+        // int val=10;
+        
+        // int k=index;
+
+        // for(int i=index;i<arr.length-1;i++){
+        //     arr[i]=arr[i+1];
+        //     k++;
+        // }
+
+        // arr[k]=0;
+        
+
+        // // printing elements after insertion 
+        // System.out.println("array representation after insertion : ");
+        // for( int x:arr){
+        //     System.out.print(" " + x+" " );
+        // }
+        // System.out.println();
+
+        
+        // problem 8 : copy two arrays 
+        
+        // code to copy the array 
+        // int b[]=new int[arr.length];
+        // for(int i=0;i<arr.length;i++){
+        //     b[i]=arr[i];
+        // }
+
+        // for(int x: b){
+        //     System.out.print(" "+ x+" ");
+        // }
+        // System.out.println();
+        
+
+        // problem 9 : reverse copying the array 
+        
+        // int b[]=new int[arr.length];
+        // int k=0;
+        // for(int i=arr.length-1;i>=0;i--){
+        //     b[k]=arr[i];
+        //     k++;
+        // }
+
+        // System.out.println("Array arr : ");
+        // for(int x: arr){
+        //     System.out.print(" "+ x+" ");
+        // }
+        // System.out.println();
+
+        // System.out.println("Array b : ");
+        // for(int x: b){
+        //     System.out.print(" "+ x+" ");
+        // }
+        // System.out.println();
+
+        // problem 10 : increasing the size of the arrray 
+
+        int b[]={1,2,3,4,6};
+
+        // so we have to increase the size of the array 
+        // array b before increasing the size of array b
+        System.out.println("Array b : ");
+        for(int x: b){
+            System.out.print(" "+ x+" ");
+        }
+        System.out.println();
+
+        int c[]=new int[2*b.length];
+
+        for(int i=0;i<b.length;i++){
+            c[i]=b[i];
+        }
+
+        b=c;
+
+        // array b after increase in size of array  
+
+        System.out.println("Array b : ");
+        for(int x: b){
+            System.out.print(" "+ x+" ");
+        }
+        System.out.println();
+
+        
+
+
     }
+
 }
