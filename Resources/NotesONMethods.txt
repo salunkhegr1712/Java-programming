@@ -2,6 +2,9 @@ so here i will type some of the functionalities which java provide along with th
 
 # methods overloading 
 
+is is one of the feature provided by Object oriented languague called polymorphism and it make code able to present 
+in many form just like you can see that a function is able to present in many forms
+
 java provide us the option to create multiple instances of same function so that so that they get triggered as the 
 arguments passed to them you have look the code so that you will get much better idea about it  
 
@@ -35,3 +38,38 @@ this type of overloading and such overloaded function are so much common in many
 a reason to make a languague dynamic and multiutility and smart as the languague is smart enough to handle the parameters 
 and also able to deduce the proper kind of the result from it 
 
+
+
+important notes to be taken 
+
+# point 1
+so in the methods overloading the main polymorphism is due to change in the parameters not to change in the
+return type of methods
+
+    so this following code will not give an error  as functions have same name but parameters inside both of the function are different
+    with respect to each other 
+
+    static int max(int a,int b){
+
+    }
+
+    static int max(int a,float b){
+
+    }
+
+# point 2
+
+    but lets see a code which will give an error
+    this above code will lead to error always as the parameters are same inside them and the name of function is
+    also same so which will lead program to error
+    
+
+    static int max(int a,int b){
+
+    }
+
+    static int float(int a,int b){
+
+    }
+
+    
