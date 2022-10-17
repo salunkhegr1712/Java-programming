@@ -1,0 +1,33 @@
+
+{
+    
+    "Java snippets":
+    {
+        "prefix" : "boilerplate",
+                "body" : [
+                    "// importing basic functionalities from the java library",
+                    "import java.lang.*;",
+                    "import java.util.*;",
+                    "",
+                    "// the main class",
+                    "public class EnterFileNameHere {",
+                    " ",
+                    "\t// basic code so that i can save my time as im so lazy to write System.out.print()",
+                    "\tstatic void print(String s){\n",
+                        "\t\tSystem.out.print(s);",
+                        "\t}\n",
+
+                        "\tstatic void println(String s){\n",
+                        "\t\tSystem.out.println(s);",
+                        "\t}",
+                        "",
+                        "\t// main function of our java code",
+                        "\tpublic static void main(String args[]){",
+                        "",
+                        "\t}",
+                    "}"
+
+                ],
+                            "description" : "to produce the main snippet for java programming language "
+    }
+}
