@@ -1,0 +1,37 @@
+so here i will type some of the functionalities which java provide along with the methods 
+
+# methods overloading 
+
+java provide us the option to create multiple instances of same function so that so that they get triggered as the 
+arguments passed to them you have look the code so that you will get much better idea about it  
+
+the overloading function are always differ by each other by the parameters and each of the overloaded function
+has own specific type of parameters you also can see them inside the code 
+
+code :
+
+    // return max between two integers
+    static int max(int a,int b){
+        // we are going to use the ternary operation in order to print the result 
+        return a>b?a:b;
+    }
+
+    // return max between two float
+    static float max(float a,float b){
+        return a>b?a:b;
+    }
+
+    // return max between two literals
+    static char max(char a,char b){
+        return a>b?a:b;
+    }
+
+    // return max between two characters
+    static char max(char a,char b){
+        return a>b?a:b;
+    }
+
+this type of overloading and such overloaded function are so much common in many programming languague and it is also 
+a reason to make a languague dynamic and multiutility and smart as the languague is smart enough to handle the parameters 
+and also able to deduce the proper kind of the result from it 
+
