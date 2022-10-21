@@ -72,4 +72,5 @@ return type of methods
 
     }
 
-    
+in the function overloading writing he body is simple and easy so be carefull when you are going 
+write the function prototype 

@@ -1,0 +1,34 @@
+here i will type the notes on the variable arguments inside the java methods
+
+say see the following function and you have to make your function work in all given belowed conditions
+
+show()
+show(10)
+show(10,20)
+show(10,20,30)
+show(10,20,30,40)
+show(10,20,30,40,....)
+
+so for such cases where we want to make it happen and write a single function and all of the above code
+will be runnable for that we will going to use variableArguments here
+
+but in java to declare this we have to use the parameters of same datatype
+
+so syntax to use the variableArguments
+
+    void show(int ... x){
+        // this x will acts like array
+    }
+
+and such how you can see them 
+
+you can take the arguments but the variable arguments as the last parameters
+and you can take only one variable arguments inside the function
+
+    void show(int size,int...array){
+        // so size is interger and then array will be its input 
+
+    }
+
+the printf(" %d %d ",10,20);
+the printf inside the cpp and it is a example of variable arguments
