@@ -23,7 +23,25 @@ public class commandLineArguments{
     // the string args is iteself  is one of the command line argumnets tool inside the java programming language
     public static void main(String args[]){
 
-        so lets print the command that we get from the terminal while running the object code and we will also going to use the
-        command line tools in order to use them inside the java programming and it has so many applic
+        // so the command line arguments are the one which are we pass them to a programm while execution of object file
+        for(int i=0;i<args.length;i++){
+            println(args[i]);
+        }
+
     }
 }
+// ghansham@an5  ~/Java-Programming/Functions   master ±  java commandLineArguments hello im ghansham how are you 
+// hello
+// im
+// ghansham
+// how
+// are
+// you
+
+// so see the above example and learn how the code take the input and we can use such input and able to acces them inside the function
+
+// so how can you take the int in the input lets see 
+// so we can take the number as input as the command line argument and then we can parse the string 
+
+// int i=Integer.parseInt(s);  
+// the Integer object has function called parseint which conver the numberical string into the integer 
