@@ -1,0 +1,10 @@
+    Functions using the recursion 
+
+in recursion code one part  is so much important and which is base condition which help our code not go in the 
+infinite loop there are some similarities are there between the recursion and loops
+we can do thing which we can do with loop without using the loop you must be always carefull about how youre going to persive
+to write base condition 
+
+example :
+
+    code for the fibonacci series 

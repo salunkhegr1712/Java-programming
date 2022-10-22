@@ -1,0 +1,10 @@
+so first see what are the command line argumnents and how can they assist us while we are want to do the coding inside the java programming language 
+
+so the commandline arguments are the one which are passed when you are going to run the perticular object code in java we have class code 
+
+TO parsing function like 
+parseInt 
+parseDouble
+parseFloat 
+such function are there and keep in mind that they found very usefull when you want to convert the string into 
+some perticular numberical datatype 
