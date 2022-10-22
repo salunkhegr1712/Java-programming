@@ -32,3 +32,6 @@ and you can take only one variable arguments inside the function
 
 the printf(" %d %d ",10,20);
 the printf inside the cpp and it is a example of variable arguments
+
+the variable arguments can also acts like a good input to take array but there are restriction are there 
+when youre going to use the variable arguments so we must have to be keen about the input of the variable
