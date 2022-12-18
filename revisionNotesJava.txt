@@ -1,0 +1,21 @@
+
+ in java the function are called as the methods 
+
+if we have to use some function without creating a perticular object from the class then we just use keyword static so that we dont have to create object each time 
+
+System.out this used to process an output and then we use System.in in order to take the input with the help of the input devices like keyboard
+
+EX :
+	System.out.println();
+	Scanner input=new Scanner(System.in); here the Scanner is predefined object inside the java programming language 
+
+String args[] inside main function is usefull for taking commandline argunment 
+
+in Scanner the nextLine() can take multiword input and next() can only able to go for single word input and you can use whichever with accordance to your needs
+
+hasIntNext() such functions are used to the is taken input is off specified type or not 
+
+
+((Object)variableName).getClass().getSimpleName() this is code to find out the variable type; it will acts like type(variableName)
+
+it is good programming practice to close the created scanner object at the end of code 
