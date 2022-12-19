@@ -18,10 +18,20 @@ public class file{
 		
 		Scanner input=new Scanner(System.in);
 
-		boolean a=input.hasNextInt();
+		// boolean a=input.hasNextInt();
 
-		System.out.println(((Object)a).getClass().getSimpleName());
+		// System.out.println(((Object)a).getClass().getSimpleName());
 
+		int a=100;
+		// this is how we do the typecasting in java
+		char g='a';
+
+		// in java the material inside the double quotes is strictly string 
+		// and you can only write the character inside the single 	quotes
+
+		char h='a';
+		// double h=998.43;
+		System.out.println(g);
 	}
 
 	//to run the java code we have to first compile it with javac and then we have to run .class file with the keyword java
