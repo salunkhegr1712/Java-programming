@@ -1,5 +1,4 @@
 import java.lang.*;
-import java.util.*;
 
 
 public class passObjects {
@@ -46,7 +45,7 @@ public class passObjects {
         // Integer m=new Integer(10);
         print(""+aa);
         changeVal(aa);
-        print(""+aa);
+        print("\n"+aa);
 
         
         // as you can see string are immutable so when you pass the string as the parameter and it will not
