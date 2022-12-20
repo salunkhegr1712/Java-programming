@@ -1,0 +1,23 @@
+# OOP stands for Object Oriented Programming
+
+the languages which provide mechanism of OOP are called as object oriented languages
+ex : Java, Python, C++, Javascript
+
+java contains object oriented programming which is used to create the classes and classes can provide us large applications in real
+life applications
+
+so the object oriented languages comes with the large number of applications you can map any concept with the object orientation 
+like say a car is there so the attributes of the car can act like the 
+
+the classes four main features in programming and these are :
+
+1) Abstraction
+    it means that you just have use its applications and there is no need for you to see for its internal functionalities. 
+    say you are using a TV at that time you just want to see TV but there is no need for you to know the internal structure of it 
+    so in the classes you are free to use the class functions but at the same time there is no need of to know that how the functions 
+    are implemented
+
+2) Polymorphism
+
+3) Encapsulation
+4) Inheritance
