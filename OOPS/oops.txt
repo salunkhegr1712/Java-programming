@@ -1,0 +1,37 @@
+in oops we are most focused on the object and the classes 
+
+how can you declare and use the java classes and how to manage between the multiple classes
+
+class circle{
+    public double radius;
+    public double area(){
+        return Math.PI*Math.pow(radius,2);
+    }
+    public double perimeter(){
+        return 2*Math.PI*radius;
+    }
+
+    # here in following code we are accessing the object inside same class with a method
+    public void main(){
+        circle c1=new circle();
+        c1.radius=10;
+        System.out.println(c1.area());
+        System.out.println(c1.perimeter());
+    }
+}
+
+public class filename{
+    public static void main(String args[]){
+        circle c1=new circle();
+        c1.radius=3.5;
+        System.out.println(c1.radius);
+        System.out.println(c1.area());
+        System.out.println(c1.perimeter());
+    }
+}
+
+above is a example such that we create a class and also how can you access the the property and method
+from them 
+
+in java for each class a different className.class file will get generated so say you have 5 classes inside the mainfile.java so for
+each of the class a different .class will be generated 
