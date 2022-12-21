@@ -1,5 +1,4 @@
 import java.lang.*;
-import java.util.*;
  
 // in this code we are going to write the code for the constructor
 
@@ -18,15 +17,24 @@ class Rectangle{
 
     // you can create multiple overloaded constructor function
     // a non parametric constructor
+    // there exist a single non parametric constructor only
+
     public Rectangle(){
         length=10;
         bredth=5;
         System.out.println("non parametric constructor is called!");
     }
-
+    
     // a parametric constructor
+    // multiple parametric constructor function can exist
     public Rectangle(int l,int b){
         length=l;bredth=b;
+        System.out.println("parametric constructor is called!");
+    } 
+
+    // case if Rectangle is a square 
+    public Rectangle(int s){
+        length=bredth=s;
         System.out.println("parametric constructor is called!");
     } 
     
@@ -65,11 +73,15 @@ public class constructor {
 
         // Rectangle a=new Rectangle();
         // System.out.println("value of length : "+a.getLength());
-        // System.out.println("value of length : "+a.getBredth());
+        // System.out.println("value of bredth : "+a.getBredth());
 
-        Rectangle b=new Rectangle(15,10);
+        // Rectangle b=new Rectangle(15,10);
+        // System.out.println("value of length : "+b.getLength());
+        // System.out.println("value of bredth : "+b.getBredth());
+
+        Rectangle b=new Rectangle(10);
         System.out.println("value of length : "+b.getLength());
-        System.out.println("value of length : "+b.getBredth());
+        System.out.println("value of bredth : "+b.getBredth());
 
     }
 }

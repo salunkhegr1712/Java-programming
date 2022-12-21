@@ -88,6 +88,8 @@ type of Constructor:
 
 2) Parameterized Constructor 
 
+    multiple number of Parameterized constructor can be written
+
     it is a Constructor which takes some Parameter and according to that will assign value to property
     it will invoked with code like :
     
@@ -95,6 +97,7 @@ type of Constructor:
 
 3) Non-Parameterized Constructor
 
+    there only one Non-Parameterized constructor should be there in code 
     this are type of Constructor which not take anything as Parameter and it is invoked with code like:
 
         Rectangle a= new Rectangle();
