@@ -35,3 +35,70 @@ from them
 
 in java for each class a different className.class file will get generated so say you have 5 classes inside the mainfile.java so for
 each of the class a different .class will be generated 
+
+
+# types of property
+
+type 1) Read and writable property
+ 
+for such cases we are able to create set and get property
+
+type 2) read only 
+
+in such case we fix some value and each next time we just can able to see the value and 
+cant able to do modification that is write 
+
+type 3) write only 
+
+this is a kind of rear case where you can just write value and you cant see 
+ex you can deposit amount in someonce bank account so you can write new value but at same time you are unable see the account 
+balance from that bank account it is 
+
+in this case we can just able to set value not able to use get values
+
+# Constructor in java programming languages
+
+the Constructor is function which is get invoked when you create a object it is mainly used to assign the value
+of property to the object.
+Basically it is method which has same name that of the className and it also dont have any returntype(it is also not a void function)
+
+how to create a Constructor function
+
+    the Constructor function not take any datatype returntype and it will just have access specifier  
+
+        ex:
+
+            accessSpecifier className(){
+                                                // A NON Parameterized Constructor
+            }
+
+            accessSpecifier className(int a,int b....){
+                                                // A Parameterized Constructor
+            }
+
+    note: Constructor dont have any kind of return type related to method
+
+
+type of Constructor:
+
+1) default Constructor 
+
+    it is a Constructor which is by default Constructor which will get invoked even if you not declared any kind of the
+    Constructor and it will not used if declared own Constructor
+
+2) Parameterized Constructor 
+
+    it is a Constructor which takes some Parameter and according to that will assign value to property
+    it will invoked with code like :
+    
+        Rectangle a= new Rectangle(10,5);
+
+3) Non-Parameterized Constructor
+
+    this are type of Constructor which not take anything as Parameter and it is invoked with code like:
+
+        Rectangle a= new Rectangle();
+
+
+also as we use data hiding in many cases and at that time we need method to access the such method like set and get
+so Constructor can acts like the set function there which can assign value to the property

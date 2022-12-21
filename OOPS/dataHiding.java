@@ -1,6 +1,5 @@
 // importing basic functionalities from the java library
 import java.lang.*;
-import java.util.*;
 
 // the access specifiers are mainly used to do data hiding 
 // we mainly use private access specifier to hide data 
@@ -83,8 +82,6 @@ public class dataHiding{
         // new length : 20
         // new bredth : 10
 
-
- 
     }
 
 }
