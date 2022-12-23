@@ -105,3 +105,67 @@ type of Constructor:
 
 also as we use data hiding in many cases and at that time we need method to access the such method like set and get
 so Constructor can acts like the set function there which can assign value to the property
+
+
+while creating the array of the class you have to create the array dynamically using with help of new keyword 
+
+new keyword help us to create new object inside the heap 
+
+how you can create any type of array of primitive datatype of user defined class
+
+    //code to create array of any type inside the java programming language
+        datatype nameOfVariable[]=new datatype[size];
+
+    ex: 
+        // Student class array creation
+        Student array[]=new Student[5];
+
+         // array of String of size 5
+        String a[]=new String[5];
+        
+        // array of integers of size 5
+        int aa[]=new int[5];
+
+        // array of character of size 10
+        char ab[]=new char[10];
+
+such like that you will be able to create the array thats how you can also able you your resources wisely
+and able to optimize code 
+
+example of a class and array of class
+
+//class declaration
+    class Student{
+
+        private String fname; 
+        private String lname;
+        private int rollNumber;
+        private String branch;
+
+        public Student(){
+            
+            Scanner input=new Scanner(System.in);
+            
+            System.out.print("enter you First Name : ");fname=input.next();
+            System.out.print("enter you Surname : ");lname=input.next();
+            System.out.print("enter you Roll Number : ");rollNumber=input.nextInt();
+            System.out.print("enter you first name : ");branch=input.nextLine();
+
+            input.close();
+        }
+
+        public Student(String f,String l,int r,String b){
+
+            fname=f;lname=l;rollNumber=r;branch=b;
+        }
+
+        public void information(){
+            System.out.println("Name : "+fname+" "+lname+"\n"+"\n Branch : "+branch+"\nRoll Number : "+rollNumber);
+        }
+
+    }
+
+so in main function you can create object like 
+
+    // we have to initialise the object array dynamically just like below 
+        Student array[]=new Student[5];
