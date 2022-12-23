@@ -66,12 +66,42 @@ public class arrayOfObjects {
         // we have to initialise the object array dynamically just like below 
         Student array[]=new Student[5];
         // after that for each instance of object you can use function and property of class 
-        array[0]=new Student();
-        array[1]=new Student("Ghansham","Salunkhe",111903033,"Computer Engineering");
 
-        array[0].information();
-        array[1].information();
+        array[0]=new Student("Ghansham","Salunkhe",111903033,"CSE");
+        array[1]=new Student("Anway","Salunkhe",111901035,"CSE");
+        array[2]=new Student("Digvijay","Salunkhe",111902034,"ME");
+        array[3]=new Student("Aditi","Salunkhe",111905031,"ENTC");
+        array[4]=new Student("Komal","Salunkhe",111904032,"CSE");
+    
+        // lets use an array to fetch the values inside the array
+        // for each loop to iterate through object
+        for(Student x:array){
+            x.information();
+        }
+        // O/P 
+        // Name : Ghansham Salunkhe
+        // Branch : CSE
+        // Roll Number : 111903033
 
+
+        // Name : Anway Salunkhe
+        // Branch : CSE
+        // Roll Number : 111901035
+
+
+        // Name : Digvijay Salunkhe
+        // Branch : ME
+        // Roll Number : 111902034
+
+
+        // Name : Aditi Salunkhe
+        // Branch : ENTC
+        // Roll Number : 111905031
+
+
+        // Name : Komal Salunkhe
+        // Branch : CSE
+        // Roll Number : 111904032
 
     }
 }
