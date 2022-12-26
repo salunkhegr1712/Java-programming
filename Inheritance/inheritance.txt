@@ -90,3 +90,86 @@ so now we have seen how the function works in inherited version so lets see in d
 
 if base class has defined own constructors so each time you envoke new object it will get opened with that 
 base class constructors
+
+so lets go and see a example
+
+    code: 
+
+        class Parent{
+            public Parent(){
+                System.out.println("constructor of parent");
+            }
+        }
+
+        class Child extends Parent{
+            public Child(){
+                System.out.println("constructor of child");
+
+            }
+        }
+
+        public class constructorInInheritance{
+            public static void main(String args[]){
+                Child a= new Child();
+            };  
+        }
+      
+output : 
+    constructor of parent
+    constructor of child
+    
+so from above we can easily see that at such conditions the first a parent object is invoked and further that
+it will get added the extra characteristics from the child itself
+
+we can use the constructor to find out the heiarchical arrangement of classes in TOP-DOWN format
+
+
+# parametric constructor in Inheritance
+
+so above idea will look handy for default constructor but it will become quiet bizzar for parametric constructor
+
+there are multiple cases which we should see in this and we will discuss them below 
+
+
+notes on super keyword :
+the super keyword should used to pass the parameters to for inherited object and it will pass the value to parent constructor
+through the child constructor
+
+you have to write : 
+                    super(parameters) 
+
+in first line of child constructor if you want to pass the value from child to parent constructor
+
+if you provide wrong inputs to the super then you will tackle with some kind of error as you passed a value to constructor but 
+there is no declared constructor function for that kind of input
+
+
+# javaPoint notes on Super keyword
+
+The super keyword in Java is a reference variable which is used to refer immediate parent class object.
+
+Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable.
+
+Usage of Java super Keyword:
+
+        super can be used to refer immediate parent class instance variable.
+        super can be used to invoke immediate parent class method.
+        super() can be used to invoke immediate parent class constructor.
+
+
+we also can able to fetch the values from parent class in child class with help of the super keyword
+
+class parent{
+    int aaaa=100;
+}
+
+class child extends parent{
+    public void printaaaa(){
+        System.out.println(super.aaaa);
+    }
+}
+
+not only you can fetch value but also able to edit and write also 
+
+you can also access the variable with dont have any kind of the access specifier with the help of the 
+super keyword
