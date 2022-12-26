@@ -82,3 +82,11 @@ the protected data members are acts like public so you can access the protected 
 
 if you have a same function in both Derived and base class so at that time the Derived class object will function inside it and
 base class object will use the function which is inside it 
+
+
+# how constructors works 
+
+so now we have seen how the function works in inherited version so lets see in detail how the constructors are will work 
+
+if base class has defined own constructors so each time you envoke new object it will get opened with that 
+base class constructors
