@@ -58,7 +58,7 @@ in this file i will write the notes on the java inheritance
 
 above is the notation how we going to show a class is gets Derived from the class 
 
-the Parent class also called superclass and base class on which further child class will get Derived from
+the Parent class also called "super"class and base class on which further child class will get Derived from
 the child class is also known as the subclass or Derived class which is get Derived to
 
 also main terms are their :
@@ -93,6 +93,7 @@ base class constructors
 
 so lets go and see a example
 
+{
     code: 
 
         class Parent{
@@ -118,6 +119,7 @@ output :
     constructor of parent
     constructor of child
     
+}
 so from above we can easily see that at such conditions the first a parent object is invoked and further that
 it will get added the extra characteristics from the child itself
 
@@ -131,45 +133,174 @@ so above idea will look handy for default constructor but it will become quiet b
 there are multiple cases which we should see in this and we will discuss them below 
 
 
-notes on super keyword :
-the super keyword should used to pass the parameters to for inherited object and it will pass the value to parent constructor
+notes on "super" keyword :
+the "super" keyword should used to pass the parameters to for inherited object and it will pass the value to parent constructor
 through the child constructor
 
 you have to write : 
-                    super(parameters) 
+                    "super"(parameters) 
 
 in first line of child constructor if you want to pass the value from child to parent constructor
 
-if you provide wrong inputs to the super then you will tackle with some kind of error as you passed a value to constructor but 
+if you provide wrong inputs to the "super" then you will tackle with some kind of error as you passed a value to constructor but 
 there is no declared constructor function for that kind of input
 
 
-# javaPoint notes on Super keyword
+# javaPoint notes on "super" keyword
 
-The super keyword in Java is a reference variable which is used to refer immediate parent class object.
+The "super" keyword in Java is a reference variable which is used to refer immediate parent class object.
 
-Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable.
+Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by "super" reference variable.
 
-Usage of Java super Keyword:
+Usage of Java "super" Keyword:
 
-        super can be used to refer immediate parent class instance variable.
-        super can be used to invoke immediate parent class method.
-        super() can be used to invoke immediate parent class constructor.
+        "super" can be used to refer immediate parent class instance variable.
+        "super" can be used to invoke immediate parent class method.
+        "super"() can be used to invoke immediate parent class constructor.
 
 
-we also can able to fetch the values from parent class in child class with help of the super keyword
+we also can able to fetch the values from parent class in child class with help of the "super" keyword
+{
+    code:
+        class parent{
+            int aaaa=100;
+        }
 
-class parent{
-    int aaaa=100;
-}
-
-class child extends parent{
-    public void printaaaa(){
-        System.out.println(super.aaaa);
-    }
+        class child extends parent{
+            public void printaaaa(){
+                System.out.println("super".aaaa);
+            }
+        }
 }
 
 not only you can fetch value but also able to edit and write also 
 
 you can also access the variable with dont have any kind of the access specifier with the help of the 
-super keyword
+"super" keyword
+
+Also few more things to add on 
+
+"super" will came mostly inside the inherited and mostly in case of object of child class
+
+for child object "super" will points towards that info inherited from the parent
+we can avoid same name conflict by using "this" and "super"
+
+{
+    code :
+
+        class A{
+            int x;
+            
+            public A(int a){
+                x=a;
+            }
+        }
+
+        class B extends A{
+            int x;
+
+            public B(int a, int b){
+
+                // first pass value to the parent class
+                super(a);
+                x=b;
+            }
+            public void function(){
+                S.O.P(we want to print child x);
+                S.O.P(we want to print Parent x);
+
+            }
+        }
+}
+
+so x is present in both parent and child so this is will be problem 
+in order to avoid it we use super
+
+ex :
+{   
+    code :
+
+        class A{
+            int x;
+            
+            public A(int a){
+                x=a;
+            }
+        }
+
+        class B extends A{
+            int x;
+
+            public B(int a, int b){
+
+                // first pass value to the parent class
+                super(a);
+                x=b;
+            }
+            public void function(){
+                System.out.println(x);
+                System.out.println(super.x);
+
+            }
+        }
+}
+
+    # This keyword
+
+like the "super" we also have another keyword like "super" which is called "this" and it is used to fetch the values 
+from same class and it is usefull
+
+both the "super" and the "super" and this keyword can be used inside the class declaration only and like "super" it is
+not any kind of case that you pass parameters with "super" via constructor and you have to write that block
+one first line only
+
+you can able to use both the "super" and this can be able to use Whenever user want to 
+
+this is very helpfull to keep the parameters and data members different from each other lets see following code
+
+this keyword can help us if we get trapped inside the name conflict example
+
+{
+    code :
+    
+        class  This{
+            int a; 
+            int b;
+
+            public This(int a,int b){
+                a=a;
+                b=b;
+            }
+
+            public void func(int a,int b){
+                a=a;b=b;
+            }
+        }
+
+}
+
+this will make code ambiguos and it is not good so in order to avoid it we can use the this key word and we will avoid this error
+
+{
+    code :
+
+            class  This{
+            int a; 
+            int b;
+
+            public This(int a,int b){
+                this.a=a;
+                this.b=b;
+            }
+
+            public void func(int a,int b){
+                this.a=a;
+                this.b=b;
+            }
+        }
+
+}
+
+ and with use of both super and this it will become more convinent
+ 
+

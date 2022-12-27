@@ -1,0 +1,17 @@
+in java private is default access specifier  
+
+Default: When no access modifier is specified for a class, method, or data member :
+
+It is said to be having the default access modifier by default. The data members, classes,
+or methods that are not declared using any access modifiers i.e. having default access modifier
+are accessible only within the same package
+
+Access Levels
+    Modifier    Class   Package Subclass  EveryWhere
+    public        Y        Y       Y         Y
+    protected     Y        Y       Y         N
+    default       Y        Y       N         N
+    private       Y        N       N         N
+
+this discussion will be conitinued after some time
+
