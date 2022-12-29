@@ -1,0 +1,36 @@
+ this property is called dynamic method dispatch 
+
+provided that Datatype1 is Parent of Datatype2
+
+Datatype1 a=new Datatype2()
+
+following is not allowd as Datatype1 is Parent of Datatype2
+Datatype2 a=new Datatype1() 
+
+so here a have reference of Datatype1 and it will get value from the Datatype2 so what is type of the a
+
+so new keyword create a object of class "Datatype2" so the value stored in a will be of type "Datatype2"
+
+
+class Parent{
+    public void meth1(){};
+    public void meth2(){};
+    public void meth3(){};
+}
+
+class Child extends Parent{
+    public void meth2(){};
+    public void meth3(){};
+    public void meth4(){};
+}
+
+here method 2 and 3 are overrided 
+
+so now lets see dynamic memory dispatch
+
+Parent a= new Child();
+
+IMPORTANT :
+
+    we can only called functions which are present in the reference only so even reference has meth4 we cant call it 
+    and the overrided methods from Child will get called when you try to access that functions
