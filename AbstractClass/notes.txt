@@ -1,0 +1,112 @@
+there are two types of classes in java :
+
+    a) Concrete classes
+    b) abstract classes
+
+abstract class also can have constructor like concrete class
+abstract class also can have  non-abstract function in order to do some functions
+
+you cant able to create the objects for abstract classes while we can create them in case of the Concrete classes
+
+# abstract function
+
+A function/Method dont have body that Method is can be declared as abstract Method
+ex :
+
+    abstract void function();
+
+such like that you can be able to declare a abstract function
+
+if you want to make a function abstract so for that you have to make whole class as abstract class
+
+a abstract class can have 0 or more abstract functions
+
+you cant create a object for abstract class but you can create the reference:
+
+    abstract class hell{
+
+    }
+
+    so 
+
+    this is not possible :
+    hell a= new hell(); // a is object
+
+    this is possible:
+    hell a; //a is a reference
+
+# USEFULLNESS OF abstract class
+
+it is mainly used in case of the inheritance where you can have abstract parent class and you can extend it with :
+
+a child class so child class can become a Concrete class if it does Method overriding for abstract Method inside 
+its parent class
+
+else if you dont want to do Method overriding and still want to have a abstract class as parent so create child class also as
+abstract
+
+    # You can create object for Concrete child class and also able to use the dynamic Method dispatch to access Method inside
+    abstract class but dynamic Method dispatch dont allow you access function outside the parent referenced class(parent class)
+    even though they are there in child class this you should always take care of
+
+ex :
+
+    it is mandatory to override each function in abstract parent class to child class 
+    so mandatory function can be created in abstract class and then it is implemented seperaty by 
+    each of its child class
+
+    say for Polygon perimeter and area so for each Concrete child class we do different implementation
+    for them
+
+        abstract class Polygon{
+            int a;
+            public Polygon(){
+                System.out.println("a abstract class object is created");
+            }
+
+            public void DMD(){
+                System.out.println("you used DMD or accessed through child");
+            }
+            abstract public double area();
+            abstract public double perimeter();
+        }   
+
+        class Triangle extends Polygon{
+
+            double a,b,c;
+            public double area(){
+                double s=(a+b+c)/2;
+                return Math.pow((s*(s-a)*(s-b)*(s-c)),1/2);
+            }
+            public double perimeter(){
+                return a+b+c;
+            }
+            // if you override all abstract function inside parent class then current class is concrete class
+        }
+
+        class Rectangle extends Polygon{
+        
+            double length,bredth;
+
+            public double area(){
+                return length*bredth;
+            }
+            public double perimeter(){
+                return 2*(length+bredth);
+            }
+            // DMD cant accces following function 
+            public void hh(){
+                System.out.println("none");
+            }
+        }
+
+
+you can use base abstract class as reference too :
+ex :
+    // lets try to access function inside abstract class
+        Polygon a=new Rectangle();
+        System.out.println("area is : "+ a.area());
+        a.DMD();    
+    // it cant accces hh()
+
+you can able to set some standards with help of Method overriding
