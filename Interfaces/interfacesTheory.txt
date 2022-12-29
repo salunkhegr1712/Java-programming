@@ -1,1 +1,191 @@
 in this file we will going to see the information about the interfaces with its theory and all part
+
+1) in java for interface also a ".class" will get created even though interface is not a class
+
+2) interfaces are equivalent to abstract classes having only abstract function 
+
+3) abstract classes have goals to have inheritance and can able to produce polymorphism but
+interfaces has only one goal and it is polymorphism
+
+4) you can able to create data members but you can only access it inside the child class not in other class 
+you can implements get and set function in order to fetch value from it also you have assign some value to data member you 
+cant just initalise them 
+
+    else it will show :
+        // double z; = expected
+    
+    so do double z=10; and this is valid
+
+    you can create variables and you can also manipualte them from child class
+
+ex :
+
+        abstract class A{
+
+            abstract public void meth1();
+            abstract public void meth2();
+
+        }
+
+this is equivalent to :
+
+interface has by default abstract function declaration so you dont have need to use the abstract keyword each time
+
+ex:
+        interface A{
+
+            void meth1();
+            void meth2();  // in interface you dont have need to specify access specifier also 
+
+        }
+
+interfaces methods dont have any kind of concrete classes.
+abstract class can have both abstract and concrete methods thats why we have to explicitly declare the abstract functions
+but in interface we only have abstract class so we dont have need to specify explicitly
+
+we can inherit class from interface for that we can use use keyword "implements" to fetch the functions from interface
+
+a class cant have multiple parent class but a class can implements multiple parent interfaces
+
+this is not possible :
+
+    class a{}
+    class b{}
+
+    class c extends a,b{};
+
+
+but this is possible:
+
+    interface a{}
+    interface b{}
+
+    class c implements a,b{};
+
+
+we cant able to create object from interface as it is not class but can be used for reference for its child class
+as interface is not a class so cant able to create constructor for interfaces
+
+interface only contains mandatory function and it can be helpfull as it can also able to provide polymorphism
+and multiple inheritance
+
+how to use interface
+code :
+{
+
+        // declare a interface
+        interface One{
+            // you can have data members inside the interface
+            int a=10;
+            // public One(){}  interface cant have any kind of the constructor
+            public void method1();
+            public void method2();
+            public void method3();
+            // interface abstract methods cannot have body
+        }
+        
+        class Two implements One{
+
+            // Two can have constructor as it is a class
+            public Two(){
+                System.out.println("object for class Two is created");
+            }
+            // Two is not abstract and does not override abstract method method3() in One
+            public void method1(){
+                System.out.println("method1 from class Two");
+            }
+            public void method2(){
+                System.out.println("method2 from class Two");
+            }
+            public void method3(){
+                System.out.println("method3 from class Two");
+            }
+            public void func(){
+                System.out.println("func function from class Two");
+            }
+            // Two is not abstract and does not override abstract method method2() in One
+        }
+
+}
+
+if you have multiple interface and have some common function signature at that you have to create only one function and 
+that can be accessible by both interface having that function signature(name)
+
+so for each interface reference it can only access common method between that reference interface
+and class method 
+
+code :
+{
+        // declaring interface 
+        interface I1{
+            void hell();
+        }
+
+        interface I2{
+            void hell2();
+        }
+
+        interface I3{
+            // double z; = expected
+            void hell2();
+        }
+
+        // declare a class having multiple parent interface
+        class I4 implements I1,I2,I3{
+            public void hell(){
+                System.out.println("hell is calling");
+            };
+            public void hell2(){
+                System.out.println("hell 2 is calling");
+            }
+
+            // I4 is not abstract and does not override abstract method hell() in I1
+        }
+}
+
+    some operations and output :
+
+{
+        I4 n=new I4();
+        I1 g=I4;
+        I2 h=I4;
+        I3 i=I4;
+
+    now all different reference are points towards same object 
+    
+        g.hell();
+        // g.hell2(); //error 
+
+        // two different interface reference accesing single method as it is method which present
+        // in both interface
+        h.hell2();
+        i.hell2();
+        // hell 2 is calling
+        // hell 2 is calling
+}
+
+{
+    it is not case that ypu have to create object for each reference you can also do 
+        I4 g=new I4();
+        I1 a=I4; this will points to I1 part of I4
+        I2 a=I4; this will points to I2 part of I4
+        I3 a=I4; this will points to I3 part of I4
+}
+
+in java a single can extends a class (abstract or concrete ) and implements a interface at a same time
+
+ex:
+    class a{
+
+    }
+    interface a{
+
+    }
+
+    class c extends a implements b{
+
+    }
+
+    such case is also possible in java
+
+
