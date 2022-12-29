@@ -102,9 +102,13 @@ ex :
 
 
 you can use base abstract class as reference too :
-ex :
+ex :    
+        //create new object of class z
+        Rectangle z=new Rectangle();
+
     // lets try to access function inside abstract class
-        Polygon a=new Rectangle();
+        //assign reference to previously created object z
+        Polygon a=z;
         System.out.println("area is : "+ a.area());
         a.DMD();    
     // it cant accces hh()

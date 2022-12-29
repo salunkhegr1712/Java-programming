@@ -15,8 +15,30 @@ cant just initalise them
         // double z; = expected
     
     so do double z=10; and this is valid
+    they are constant as they declared as static and final so the value of variable declared in interface
+    cant be changed 
 
     you can create variables and you can also manipualte them from child class
+
+5) static interface can have body inside interface
+
+{
+    interface One{
+        int X=10;
+    // static function can have body inside interface
+    static public void hello(){
+        System.out.println("hello world");
+    }
+
+    and in order to use access them we have to use 
+    One.X; and One.hello();
+    
+}
+
+also you can use default keyword to create function with body in interface
+the default function in interface can be accesed through reference and through object created from it 
+ex:
+
 
 ex :
 

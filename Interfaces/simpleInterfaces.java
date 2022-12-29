@@ -8,11 +8,22 @@ import java.util.*;
 interface One{
     // you can have data members inside the interface but cant be access
     public int a=10;
+    // default int z=10;
     // public One(){}  interface cant have any kind of the constructor
     public void method1();
     public void method2();
     public void method3();
     // interface abstract methods cannot have body
+
+    // static function can have body inside interface
+    static public void hello(){
+        System.out.println("hello world");
+    }
+
+    // now also create a class with default 
+    default void world(){
+        System.out.println("hello world");
+    }
 }
 
 // now declare class on basis of the declared interface
@@ -37,6 +48,7 @@ class Two implements One{
     public void func(){
         System.out.println("value of a : "+(a+100));
     }
+    
     // Two is not abstract and does not override abstract method method2() in One
 }
 
@@ -49,11 +61,12 @@ public class simpleInterfaces{
 
         // One a=new One(); //One is abstract; cannot be instantiated
 
-        Two a=new Two();
-        a.method1();
-        a.method2();
-        a.method3();
-        a.func();
+        // Two a=new Two();
+        // a.method1();
+        // a.method2();
+        // a.method3();
+        // // a.hello();
+        // a.func();
 
         // OUTPUT :
         // object for class Two is created
@@ -66,7 +79,8 @@ public class simpleInterfaces{
         // with interface as reference we can just access function which are override in class and function is 
         // called from class (override method from class)
 
-        // One g=new Two();
+        // One g=a;
+
         // g.method1();
         // g.method2();
         // g.method3();
@@ -74,5 +88,23 @@ public class simpleInterfaces{
         // g.func(); cannot find symbol symbol:   method func() location: variable g of type One
 
         // with interface we can use interface just like abstract class using dynamic method dispatch 
+
+        // access the static function and data members from interface
+        System.out.println(One.a);
+        One.hello();
+        // OUTPUT :
+        // 10
+        // hello world
+
+        // now try access default classes in java
+        // access with object
+        Two m=new Two();
+        m.world();
+        // hello world
+        // access with interface reference
+
+        One zz=m;
+        zz.world();
+        // hello world
     }
 }

@@ -72,9 +72,9 @@ public class inheritanceAndAbstractClasses {
     public static void main(String args[]){
 
         // lets see for rectangle
-        // Rectangle a=new Rectangle();
-        // System.out.println("area is : "+ a.area());
-        // System.out.println("perimeter is : "+ a.perimeter());
+        Rectangle z=new Rectangle();
+        System.out.println("area is : "+ z.area());
+        System.out.println("perimeter is : "+ z.perimeter());
 
         //  output : 
         // a abstract class object is created
@@ -82,7 +82,8 @@ public class inheritanceAndAbstractClasses {
         // perimeter is : 0.0
 
         // for triangle
-        // Triangle a=new Triangle();
+        // assigning to same object which is created above 
+        // Triangle a=z;
         // System.out.println("area is : "+ a.area());
         // System.out.println("perimeter is : "+ a.perimeter());
         
@@ -93,9 +94,9 @@ public class inheritanceAndAbstractClasses {
         
 
         // lets try to access function inside abstract class
-        Polygon a=new Rectangle();
-        System.out.println("area is : "+ a.area());
-        a.DMD();    
+        // Polygon a=z;
+        // System.out.println("area is : "+ a.area());
+        // a.DMD();    
         // it cant accces hh()
     }   
     // such like that the abstract class can be very usefull in many cases of inheritance

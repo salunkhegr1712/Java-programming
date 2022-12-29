@@ -1,0 +1,10 @@
+you can create array for a interface
+
+    // declare interface
+    interface member{
+        void callBack();
+    }
+
+create array 
+
+    member a[]=new member[100];
