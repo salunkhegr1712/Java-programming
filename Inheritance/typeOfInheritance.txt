@@ -1,0 +1,82 @@
+// in this code we are going to showcase the multiple types of the inheritance can be possible in
+// java programming
+
+// java do not support Multilevel inheritance
+
+1) Single Inheritance 
+
+                |--------------|
+                |   BLOCK 1    | 
+                |--------------|
+                    ||
+                    \/
+                |--------------|        
+                |   BLOCK 2    |        // THIS IS AN EXAMPLE OF single inheritance
+                |--------------|
+
+
+2) multilevel inheritance 
+
+                
+                |--------------|
+                |   BLOCK 1    | 
+                |--------------|
+                    ||
+                    \/
+                |--------------|        
+                |   BLOCK 2    |        // THIS IS AN EXAMPLE OF MULTILEVEL INHERITANCE
+                |--------------|
+                    ||
+                    \/
+                |--------------|
+                |   BLOCK 2    | 
+                |--------------|
+
+3) Heiarchical Inheritance
+
+                                |--------------| 
+                                |   BLOCK 2    |            
+                                |--------------|  
+                                   /        \
+                                 /           \
+                               /              \
+                 |--------------|        |--------------|
+                 |   BLOCK 1    |        |   BLOCK 2    |   
+                 |--------------|        |--------------|  
+                     ||                        /      \  
+                     \/                      /         \
+               |--------------|    |--------------|   |--------------|
+               |   BLOCK 1    |    |   BLOCK 2    |   |   BLOCK 2    |
+               |--------------|    |--------------|   |--------------|
+        
+        // this is heiarchical inheritance where one class can give rise to multiple
+        // class and this as whole form a tree like structure
+
+
+
+4) hybrid inheritance 
+
+    in this we can have inheritance which conssist of multiple types of the inheritance 
+    this can be achieved using interfaces
+
+                     |-------|  
+               ||--->|   A   |-----|| 
+               ||    |-------|     ||
+               ||                  ||
+               \/                  \/                                                                 
+            |-------|           |-------|                                                                                            
+            |   B   |           |   C   |          
+            |-------|           |-------|                                                                                       
+               |                    |  
+               |                    |
+               |     |-------|      |
+               |---->|   D   |<-----|
+                     |-------|  
+         
+    SUCH STRUCTURE CAN BE POSSIBLE INCASE OF INTERFACES
+        
+        
+
+
+    
+                                
