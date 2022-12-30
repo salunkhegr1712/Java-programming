@@ -1,110 +1,14 @@
 Java Anonymous Class
-In this tutorial, you will learn about anonymous classes in Java with the help of examples.
+for each anonymous class a file of anonymousClass.java will get created
 
-In Java, a class can contain another class known as nested class. It's possible to create a nested class without giving any name.
+if you create anonymous inner class 
 
-A nested class that doesn't have any name is known as an anonymous class.
+it name as 
+OuterClassName$number.class
 
-An anonymous class must be defined inside another class. Hence, it is also known as an anonymous inner class. Its syntax is:
+ex: 
+    Outer$1.class
+    Outer$2.class
+    Outer$3.class
 
-        class outerClass {
-
-            // defining anonymous class
-            object1 = new Type(parameterList) {
-                // body of the anonymous class
-            };
-        }
-Anonymous classes usually extend subclasses or implement interfaces.
-
-Here, Type can be
-
-a superclass that an anonymous class extends
-an interface that an anonymous class implements
-The above code creates an object, object1, of an anonymous class at runtime.
-
-Note: Anonymous classes are defined inside an expression. So, the semicolon is used at the end of anonymous classes to indicate the end of the expression.
-
-Example 1: Anonymous Class Extending a Class
-class Polygon {
-   public void display() {
-      System.out.println("Inside the Polygon class");
-   }
-}
-
-class AnonymousDemo {
-   public void createClass() {
-
-      // creation of anonymous class extending class Polygon
-      Polygon p1 = new Polygon() {
-         public void display() {
-            System.out.println("Inside an anonymous class.");
-         }
-      };
-      p1.display();
-   }
-}
-
-class Main {
-   public static void main(String[] args) {
-       AnonymousDemo an = new AnonymousDemo();
-       an.createClass();
-   }
-}
-Run Code
-Output
-
-Inside an anonymous class.
-In the above example, we have created a class Polygon. It has a single method display().
-
-
-We then created an anonymous class that extends the class Polygon and overrides the display() method.
-
-When we run the program, an object p1 of the anonymous class is created. The object then calls the display() method of the anonymous class.
-
-    Example 2: Anonymous Class Implementing an Interface
-    code :
-
-{
-        interface Polygon {
-        public void display();
-        }
-
-        class AnonymousDemo {
-        public void createClass() {
-
-            // anonymous class implementing interface
-            Polygon p1 = new Polygon() {
-                public void display() {
-                    System.out.println("Inside an anonymous class.");
-                }
-            };
-            p1.display();
-        }
-        }
-
-        class Main {
-        public static void main(String[] args) {
-            AnonymousDemo an = new AnonymousDemo();
-            an.createClass();
-        }
-        }
-
-}
-Inside an anonymous class.
-In the above example, we have created an anonymous class that implements the Polygon interface.
-
-Advantages of Anonymous Classes
-
-In anonymous classes, objects are created whenever they are required. That is, objects are created to perform some specific tasks.
- For example,
-
-        Object = new Example() {
-        public void display() {
-            System.out.println("Anonymous class overrides the method display().");
-        }
-        };
-
-
-Here, an object of the anonymous class is created dynamically when we need to override the display() method.
-
-Anonymous classes also help us to make our code concise.
+FOR MORE REFERNCE SEE CODE OF Anonymous Class AND AnonymousInnerClass

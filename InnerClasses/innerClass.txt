@@ -110,6 +110,55 @@ a) Nested inner class
     Outer$1Inner.class
     Outer$1Hell.class
 
-    ex:
+
+    c) Anonymous inner class 
+
+        read the code related anonymous class and AnonymousInnerClass and text file om anonymousClass
+
+    d) static inner class
+
+        as we have do a large operations to create object of inner class inside the nested inner class
+        so static class make our lives simple in that context
+
+        just add static keyword before the class and that class can be accessable outside the outer class
+        without doing lot of hard work
+
+        Outer$Inner.class file get formed for static class
+    
+code :
+{
 
 
+    class Outer{
+
+        static public int a=10;
+        int z=101;
+
+        //inner class
+        static class Inner{
+            
+            public int  m=10;
+            public void hero(){
+                a=11;
+                // z=100;error : non-static variable z cannot be referenced from a static context
+                System.out.println("static class innner ");
+                }
+
+            }
+        }
+
+        // main function of our java code
+        public static void main(String args[]){
+
+            // now lets try to access static inner class 
+            Outer.Inner k=new Outer.Inner(); 
+                k.hero();
+    }
+                   
+}
+        
+    you can able to create object for inner class  by 
+
+        Outer.Inner variableName= new Outer.Inner();
+    
+    and this is quite simple than that of nested Class
