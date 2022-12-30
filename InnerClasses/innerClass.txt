@@ -44,14 +44,12 @@ a) Nested inner class
             public int x=111;
             
             public void function1(){
-                // inner class able to access the private members also from outer class
                 func1();
                 func2();
-
                 a=11;
                 z=1111;
             }
-            // invalid method declaration; return type required
+
         }
 
             // this function is used in order to access the inner class
@@ -92,5 +90,26 @@ a) Nested inner class
         }
 
 }
+
+    b) Local inner class
+
+    this type of class are used inside a specific function only and its scope is in that function only we cant 
+    able to access them in main function or even in same outer class we cant access it 
+
+    such functions are used when we need to create a class only for a small interval and we can be able 
+    create such local classes
+
+    such local class can be used to inherit some class or to do implementation of some interface
+
+    for local inner class it will create a .class file like:
+
+    Outer$1Inner.class
+
+    and if you have multiple local inner class and say of name of classes are  Inner and Hell :
+
+    Outer$1Inner.class
+    Outer$1Hell.class
+
+    ex:
 
 
