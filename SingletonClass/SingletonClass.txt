@@ -1,0 +1,33 @@
+the singleton class is a class which can produce only one object and it will be shared through all the 
+code and we will pass that object whenever needed
+
+how to create the code for singleton set 
+
+a) Create a private constructor so that we cant able to produce the object outside that class
+
+    means outside class
+
+        ClassName var= new ClassName();
+        is prohibited outside class
+
+b) Create a private and static class reference which can used throughout the proogram as singleton class has singleton object
+    so this reference will store that object
+
+    the reference is initially null
+
+    ClassName a=null;
+    
+    and we will assign object to it inside the method which provide this object
+
+c) Create a public and static function which will create new object if it not exists and if already created
+    pass object for it 
+
+    in such manner we can able to create the singleton classes
+
+
+as we have a static reference and static method so we can access function to get instance of object. and call it by 
+
+   ClassName reference= ClassName.function();
+
+   such like that you can get object for it 
+
