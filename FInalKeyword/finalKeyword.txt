@@ -1,0 +1,72 @@
+    # Java Variable
+
+a) declare and assign value 
+    {
+        final int m=100;
+    }
+        
+
+b) declare and then assign value 
+    {
+        final int z;
+        z=11;
+    }   
+
+c) declaring and assigning value using static block 
+       
+    {
+        static final double pi;
+    
+        static {
+            pi=11.45;
+        }
+    } 
+
+d) using constructor to assign value to final Variable
+
+    {
+        final long cat;
+
+        public finalVariables(){
+            cat=100;
+        }
+    
+    }
+
+these above are some method to assign value to final Variables
+
+
+    # Java methods
+
+class Superclass {
+    final void meth(){
+        System.out.println("hello world");
+    }
+}
+
+class Subclass extends Superclass{
+
+    // final methods are not able to use for method overridding 
+
+    //  void meth(){
+
+    //  }
+
+    //  error : meth() in Subclass cannot override meth() in Superclass overridden method is final
+}
+
+    # final class
+
+now lets try final class final class cant able to use as parent in inheritance 
+{
+    final class Mother {
+
+    }
+
+        // error : cannot inherit from final Mother
+    final class Child extends Mother{
+
+    }
+}
+
+        
