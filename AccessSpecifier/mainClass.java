@@ -8,13 +8,16 @@ import java.lang.*;
 import java.util.*;
 import ghansham.file1;
 
+// now we are going to test different package and subclass
+
 // the main class
 public class mainClass {
 
     // main function of our java code
     public static void main(String args[]){
 
-        // so file1 and mainClass are in different package lets check can we access it or not 
+    // a) this is case of different package and nonsubclass
+        // so file1 and mainClass are in different package lets check can we access it or not
         file1 m=new file1();
         System.out.println(m.sumOfVariables());//100
 
@@ -27,5 +30,9 @@ public class mainClass {
         // System.out.println("sum of all variables is : "+(m.a+m.b+m.c+m.d));
                                                                     
         // 3 errors
+
+    // b)now lets see class for different class and subclass
+        
+        
     }
 }
