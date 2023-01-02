@@ -1,0 +1,57 @@
+here in this file i will write the theory related to the java Package
+
+so the java Package contains java code or Class or the interface which we can use in any java file
+
+for Reference you can see the java lib and from that src.zip 
+
+theory:
+
+    java Package is nothing but a folder which contains some subpackage(sub-folder), .java file , .Class
+    file and which we can use in code and make reuse of code and save efforts to write same piece of code
+    multiple number of times
+
+    the java supports user defined Packages which we use very often like 
+
+    java.lang;
+    java.util;
+
+    and they are allot and they are very helpfull in our day to day life and can make our coding easy 
+
+    you can also make your own Package and use them in code file which is excellent feature inside the java 
+    programming Language
+
+
+    Ex :
+        import java.lang.*;
+
+        so here import is keyword which can get files from Package to ram and we can use them according to our will
+
+        . is used to go inside subpackage 
+        so java.lang means we are currently in lang Package which is present inside in java Package
+
+        * symbolise extract all files from that perticualar Package
+    
+    you can extract all things in Package with * or you can able to get specific file with name of file 
+
+        ex:
+            import java.util.Scanner;
+        so we ar getting specific file from the java.util Package
+
+    also there is not a neccesity that you have to use import you can call that Package and perticualar Class from It
+    but it is not a good deal as you have write more code to do same task with is not optima
+
+
+        // import class at start                                                //not import things at start
+    import java.lang.String;                                    |               
+    public class packagesInJava{                                |               public class packagesInJava{
+                                                                |                   // main function of our java code       
+        // main function of our java code                       |                   public static void main(String args[]){
+        public static void main(String args[]){                 |
+                                                                |                   // create object for String class
+            // create a String class object                     |                   java.lang.String a = new java.lang.String();
+            String a = new String ();                           |               }    
+        }                                                       |
+    }                                                           |
+
+    as you can see you can save code with import Package at start
+    
