@@ -1,0 +1,95 @@
+there are main four possible access specifier are there inside the java programming language and that are :
+
+    1) default
+    2) private
+    3) protected
+    4) public
+
+
+in class you can create and access specifier to:
+
+    a) variables
+    b) inner class
+    c) functions
+
+there are two types of relationships are there between two class
+
+    a) subclass that is one class is subclass of another class
+
+        {
+            class AA{
+                ---||----;
+            }
+
+            class BB extends AA{
+                ---||---;
+            }
+            such connection is subclass relationship
+        }
+    
+    b) non subclass relationships
+
+        this can be like a class is using object of another class such connection are non-subclass
+        {
+            class AA{
+
+            }
+            class BB{
+                AA a= new AA();
+            }
+        
+        }
+        or
+        {
+            class AA{
+
+            }
+            class BB{
+
+            }
+            having no relationship this also consist inside the non-subclass relationship
+        }
+
+# also there can be pair of class having
+
+    a) class present in same packet
+    b) class not present in same packet
+
+    still that can have relationship but the mood of access specifier will change on basis of that
+
+
+    # trick
+
+now you have to remember trick so that at any step you can able to tell that in that relationship
+the other class will able access the resources for that perticular access specifier or not
+
+    default : the class from same packet will able to access resources
+    private : same class elements can access resources
+    protected : same packet entity and inherited entity can access resources
+    public : anyone can access resources 
+
+
+
+    access table :
+
+                            default     private     protected   public
+
+            same 
+            class             yes         yes           yes       yes
+
+            same packet
+            subclass          yes         no            yes       yes
+
+            same packet 
+            non-subclass      yes         no            yes       yes
+
+            diff. packet 
+            subclass          no          no            yes       yes
+
+            diff. packet            
+            non-subclass      no          no            no        yes
+
+    follow above table and you will able to use them to see that access will got or not 
+            
+
+read handwritten notes and watch video of explaining code 
