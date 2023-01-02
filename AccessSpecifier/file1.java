@@ -8,7 +8,13 @@ import java.util.*;
 // the main class
 public class file1 {
 
-    public void function1(){
-        System.out.println("hello from file1 and package ghansham");
+    // it will have 4 variables
+    int a=10;
+    private int b=20;
+    protected int c=30;
+    public int d=40;
+
+    public int sumOfVariables(){
+        return a+b+c+d;
     }
 }

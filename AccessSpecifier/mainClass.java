@@ -14,5 +14,18 @@ public class mainClass {
     // main function of our java code
     public static void main(String args[]){
 
+        // so file1 and mainClass are in different package lets check can we access it or not 
+        file1 m=new file1();
+        System.out.println(m.sumOfVariables());//100
+
+        // System.out.println("sum of all variables is : "+(m.a+m.b+m.c+m.d));
+        // mainClass.java:21: error: a is not public in file1; cannot be accessed from outside package
+        // System.out.println("sum of all variables is : "+(m.a+m.b+m.c+m.d));
+        // mainClass.java:21: error: b has private access in file1
+        // System.out.println("sum of all variables is : "+(m.a+m.b+m.c+m.d));                                                       
+        // mainClass.java:21: error: c has protected access in file1
+        // System.out.println("sum of all variables is : "+(m.a+m.b+m.c+m.d));
+                                                                    
+        // 3 errors
     }
 }
