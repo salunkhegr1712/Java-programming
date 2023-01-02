@@ -54,4 +54,121 @@ theory:
     }                                                           |
 
     as you can see you can save code with import Package at start
+
+
+so now as we discussed how can we use prebuilt class now we will discuss how can we able to create our own Packages
+
+first create a java file which do not contains main function and at start of .java file write 
+
+// say you want to create package called ghansham
+
+so write the package at start of the file 
+and then write class and its function inside it  except main
+
+    package ghansham;
+
+    ex:
+        packagesInJava.java file :
+
+        {
+            package ghansham;
+            // import class at start
+            import java.lang.String;
+
+            // the access specifer you provide here has lot of importance and it is main class of file
+            public class packagesInJava{
+
+                public void hello(){
+                    System.out.println("hello world");
+                }   
+            }
+        }  
     
+    then at you have two options
+
+    ==>this option is prefered as you just have to use command and things will happen by there own 
+    a) compile and create package automatically by using command
+
+        javac -d ./ packagesInJava.java
+
+        this will create a folder package ghansham if it is not already there and inside it you can able to see
+        packagesInJava.class file
+
+    b) else do normal compilation and create folder having same name you specified in java file and paste .class file
+    inside it both options will do
+
+
+# how to create subpackage
+    
+    use . dot operator to create the code for the subpackage
+
+    say you have package called ghansham and subpackage called salunkhe and you want to add a file inside subpackage
+    so do 
+
+    package ghansham.salunkhe;
+
+    ex:
+    demo.java
+    {
+        // here we want to add code inside the subpackage salukhe
+        package ghansham.salunkhe;
+
+        // importing basic functionalities from the java library
+        import java.lang.*;
+        import java.util.*;
+
+        // main class dont have main function as we are not going to use it as runnable file 
+        // the main class
+        public class demo{
+            public void hello1(){
+                System.out.println("Hello from demo");
+            }
+
+        }
+    // this code will create a subpackage inside the ghansham and push .class file into it
+    }
+
+
+    at start of the code and it will create inner subpackage inside ghansham if it not already created
+
+    if you want to create multiple files in same package you can use command like 
+        
+        javac -d . *.java
+
+
+now as we created how can we able to access it
+
+     we can use import keyword
+
+    import package.subpackage.filename;
+    import package.filename;
+
+    and with this we can easily able to access the files inside package 
+
+    ex :
+    practise.java
+    {
+        // importing basic functionalities from the java library
+        import java.lang.*;
+        import java.util.*;
+
+        //importing of use created package
+        import ghansham.packagesInJava;
+        import ghansham.salunkhe.demo;
+
+        // the main class
+        public class practise {
+
+            // main function of our java code
+            public static void main(String args[]){
+                packagesInJava a= new packagesInJava();
+                a.hello();
+                demo z= new demo();
+                z.hello1();
+
+                // output :
+                // hello from ghansham
+                //Hello from demo
+            }
+        }
+    }
