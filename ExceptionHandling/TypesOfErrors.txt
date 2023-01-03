@@ -1,0 +1,92 @@
+inside this code i will going to explain the types of errors possible inside the programming
+this errors are universal and it is not a case that a perticular language only has this errors
+
+    # compile-time errors vs runtime errors 
+
+    the compile time error are one which get invoked when we get error while we are doing  compilation
+    the run time error are one which can get pumped out when .class or .exe file is under execution inside memory
+
+    # concept
+
+                            +-----------------+
+                            |                 |
+                            |                 |
+                            |                 |
+            Programmer ==>  |    Programme    | ==> User
+                            |                 |
+                            |                 |
+                            |                 |
+                            +-----------------+
+        
+        so above digrame show that programmer write the code for programme and user is one which is going to use 
+        the programme
+
+        so programmer can get : i) Syntax errors  ii) logical errors
+
+        after resolving those types of the error programmer gives the programme to user.
+
+        so user can get : runtime errors
+        
+        so inorder to handle runtime errors and make user experience good programmer uses Exception handling
+        so that it reduces crashing of programme due to some kind of runtime error
+
+
+errors :
+
+    a) Syntax errors
+        
+        such errors occurs when you fail to occur due to syntaxical mistakes inside the code 
+
+        ex:
+            i) int a,,b;//<identifier> expected
+            ii) System.out.println("hello world');//unclosed string literal
+            iii)    int x,y;
+                    x=10+x+y+c;
+                    //cannot find symbol;symbol: variable c; location: class code
+            these above are some type of the common compilation errors which we tackle while doing coding
+            these are visible errors so if you do mistakes like Syntax errors you may tackle Syntax errors
+    
+    b) logical errors
+
+        this types of errors are the one which we cannot popped out but these are logical error made by programmer
+        and these types of error found when you not get some expected error
+
+        this are not like Syntax error which get popped up if do so; thats why these type of hard to remove and 
+        we have to use the debugger to find out the error and resolve the issue 
+
+        ex :
+            you have to print a array and you mistakely started to index from 1 instead of the 0
+
+            int arr[]= new int[10];
+
+            for(int i=1;i<arr.length;i++){
+                System.out.println(arr[i]);
+            } 
+            // such types of errors can be seen 
+
+    c) runtime errors
+
+        now these type of error are came due to wrong handling of the code from users end which lead to the malfunction of 
+        programmer even though code for that programme is good
+
+        these types of the error arises due to main two point which lead to crash of programme
+        
+        i) invalid input
+        ii) unavailibility of resources 
+
+        ex:
+
+            in calculator user input 0 for denominator
+            delete some neccesary file needed for execution of that programme
+            some programme need internet connection and user dont have it
+        
+        this type of error can able to avoided and with the code itself can provide msg to user that 
+        some things is went wrong and you can make that right so that your programme will run successfulley
+
+    the Exception means that these programme will run except this Exceptions 
+    with Exception we can provide msg to user and that will avoid such type of error
+
+    # Exception handling
+
+    Exception are run time error and we can handle such error with the use of the Exception handling
+
