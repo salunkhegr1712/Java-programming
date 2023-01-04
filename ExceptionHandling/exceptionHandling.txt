@@ -1,5 +1,11 @@
-
     # Exception handling
+
+    ==> main goal of exception handling is even though some code goes to exception that is runtime error so
+        it should not affect overall functioning of programme that is except this code all other code should 
+        be intact and run as they previosly run without any problem due to its exception code
+    
+    with exception we can handle only exception / runtime error other kinf of error were not possible to solve
+    with exception handlings
 
     Exception are run time error and we can handle such error with the use of the Exception handling
 
@@ -51,6 +57,51 @@
 
 
     lets see how try catch block works in real code sense :
+
+    # How to use try catch  block guideline
+
+    in try block if you tackle exception code after that will never be used so try to give less much code to the try block
+    ex:
+code{ 
+        try{        
+            int a=10,b=0;
+            int r=a/b;
+            
+            System.out.println("a : "+a);
+            System.out.println("b : "+b);
+            System.out.println("division is : "+r);    
+        }
+        catch(ArithmeticException a){
+            System.out.println("hello user you entered O at denominator for array");
+
+        }
+    }
+Output:
+    hello user you entered O at denominator for array
+
+    so after r=a/b even we are using exception handling following code will not executed 
+
+    so can simply do :
+
+code{
+        int a=10,b=0,r=0;
+        try{        
+            
+            r=a/b;   
+        }
+        catch(ArithmeticException a){
+            System.out.println("hello user you entered O at denominator for array");
+
+        }
+        System.out.println("a : "+a);
+        System.out.println("b : "+b);
+        System.out.println("division is : "+r);   
+    }
+
+Output :
+        a : 10
+        b : 0
+        division is : 0
 
     tips :
             write only that code inside try block which can really lead tp Exceptions

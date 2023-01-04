@@ -1,0 +1,97 @@
+when we have multiple possible exception inside our code so at such case we can be able to use :
+
+    # Nested try catch block and multiple catch block
+
+    sometimes in many case you have chances that there can be multiple exception of different types can be there
+    so for that we can able to use Nested try catch block (try catch block inside another try catch block) or
+    we can use multiple catch statements which will catch different type of exception and with the help
+    of them we can able to resolve programme with multiple exception
+
+    a) multiple catch blocks
+    in normal day to day life it is common that we have multiple try catch blocks
+
+code :
+
+    first lets take learn few exception and then we are to solve them with the help of the exception handling
+    a) ArrayIndexOutOfBoundsException : array index given is bigger than size of array
+    b) ArithmeticException : divide by 0
+
+    so we have a code which has both the exception how can you deal with it 
+
+{
+    try{
+        
+            int a[]={10,0,8,9,3,5};
+            int r;
+            r=a[0]/a[1]; // this will give ArithmeticException
+            
+            System.out.println("division is : "+r);
+            System.out.println("element at position 10 is : "+a[10]); //this line will give ArrayIndexOutOfBoundsException
+            
+        }
+
+        // first catch will try to handle ArrayIndexOutOfBoundsException
+        catch(ArrayIndexOutOfBoundsException a){
+
+            System.out.println("hello user you entered wrong Index for array");
+            // java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 6
+            
+        }
+
+        // now another catch block is for ArithmeticException
+        catch(ArithmeticException a){
+
+            System.out.println("hello user you entered a wrong value at denominator");     
+            // java.lang.ArithmeticException: / by zero
+        }
+}
+
+    # Nested try catch 
+
+    in this file i will write the code for the Nested try catch and it more usefull than that of the multiple try catch as
+    we in those cases we must have the info about the which part of the code can lead to the exception
+    and it will not use
+
+lets see some of the code for the nested try catch block
+
+    term nested stands for a thing inside another
+    in these case we have a try catch block inside another try catch block 
+
+code{
+
+    public static void main(String args[]){
+
+        try{
+        
+            int a[]={10,0,8,9,3,5};
+            int r;
+
+            // we deal with following line with inner try catch
+            try{
+                r=a[0]/a[1];
+            }
+            catch(ArithmeticException z){
+                System.out.println("error! denominator is zero");
+                r=0;            
+            }        
+            System.out.println("division is : "+r);
+
+            // we deal following line with outer try catch
+            System.out.println("element at position 10 is : "+a[10]); // this code will lead to ArrayIndexOutOfBoundsException
+            
+        }
+
+        catch(ArrayIndexOutOfBoundsException a){
+
+            System.out.println("hello user you entered wrong Index for array");
+        }
+        
+        // output :
+        // error! denominator is zero
+        // division is : 0
+        // hello user you entered wrong Index for array
+    }
+}   
+
+the nested try catch block will be very good option than multiple catch block if your dealing with
+multiple exceptions
