@@ -85,8 +85,3 @@ errors :
 
     the Exception means that these programme will run except this Exceptions 
     with Exception we can provide msg to user and that will avoid such type of error
-
-    # Exception handling
-
-    Exception are run time error and we can handle such error with the use of the Exception handling
-

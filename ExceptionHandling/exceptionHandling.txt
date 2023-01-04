@@ -1,0 +1,131 @@
+
+    # Exception handling
+
+    Exception are run time error and we can handle such error with the use of the Exception handling
+
+    main goal of Exception handling is that even presenc of the Exceptions programme should run simply
+    without brekage that is programme should not get crash when it tackle with at exception that is runtime
+    error
+
+    {
+        public static void main(String args[]){
+        // System.out.println("hello world');//unclosed string literal
+        
+        int a,b,c;
+        
+        a=100;
+        b=0;
+        c=a/b;
+        System.out.println("the value of the division is : "+c);
+        System.out.println("end of code!\nBye!");
+        // Exception in thread "main" java.lang.ArithmeticException: / by zero
+        }
+    }
+
+    java language shows error as exception and will also specify the type of exception you run into and
+    it is helpfull
+
+    as you can see above example where we are going to use divide by 0 which lead us to error so in order to 
+    and it is ArithmeticException so in order to handle it we use try catch block 
+
+    # try catch block
+
+        try{
+            
+            inside the try block we write the code which has chances to go berserk 
+            and lead us to the Exceptions;
+        }
+
+        catch(ArithmeticException e){
+
+            the code inside the catch block will get invoked if code from the try block lead to
+            some exception so we can use the;
+
+            each exception has own type like above we have divide by 0 exception and it is of
+            class "ArithmeticException"  
+            
+            "e" : it is object which reason which lead to exception you can print or do any other task
+                    with e inside the catch block
+        
+        }
+
+
+    lets see how try catch block works in real code sense :
+
+    tips :
+            write only that code inside try block which can really lead tp Exceptions
+    
+    see code again
+    {
+        public static void main(String args[]){
+
+        int a,b,c;
+        a=100;b=0;
+        c=a/b;
+
+        System.out.println("the value of the division is : "+c);
+        System.out.println("end of code!\nBye!");
+        // Exception in thread "main" java.lang.ArithmeticException: / by zero
+        }
+    }
+    we want to run whole code even if we ran into some kind of the exception
+    so want to run the code such it should print the type of exception arised  and println below that also run 
+    even exception occurs
+
+    # code using try catch block
+{
+        public static void main(String args[]){
+
+        int a,b,c=0;
+        a=100;b=0;
+        try{ 
+            c=a/b;
+        }
+        catch(ArithmeticException e){
+            
+            System.out.println("you ran in exception error");
+            System.out.println(e);
+        }   
+        System.out.println("the value of the division is : "+c);
+        System.out.println("end of code!\nBye!");     
+
+        }
+    Output :{
+    you ran in exception error
+    java.lang.ArithmeticException: / by zero
+    the value of the division is : 0
+    end of code!
+    Bye!
+    }
+    
+    so even if code is going to fail due to exception overall functioning of entire programme not going to 
+    fail which make the exception handling very very usefull in order to avoid the runtime error
+}
+
+    so lets try same code with some twist that is b!=0
+    say b=22
+{
+    public static void main(String args[]){
+
+        int a,b,c=0;
+        a=100;b=22;  //change is here only
+        try{ 
+            c=a/b;
+        }
+        catch(ArithmeticException e){
+            
+            System.out.println("you ran in exception error");
+            System.out.println(e);
+        }   
+        System.out.println("the value of the division is : "+c);
+        System.out.println("end of code!\nBye!");     
+
+        }
+    Output:
+        the value of the division is : 4
+        end of code!
+        Bye!
+}
+
+so even if the no exception occured the try catch  block still very good tool for the exception handling and
+also prevent the code to go through the Exceptions
