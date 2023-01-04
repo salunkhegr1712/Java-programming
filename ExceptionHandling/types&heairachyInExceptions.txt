@@ -1,0 +1,192 @@
+in this file i will briefly explain things about the type and the heiarchy of the exceptions
+
+    see following table :
+
+                           +---------------------+
+                ||=========| types Of exceptions |======||
+                ||         +---------------------+      ||
+                \/                                      \/
+        +----------------------+                +---------------------+
+        |userDefined exceptions|      ||========|  BuiltIn Exceptions |======||
+        +----------------------+      ||        +---------------------+      ||
+                                      \/                                     \/
+                            +----------------------+                +----------------------+
+                    ========|  Checked exceptions  |        ========| Unchecked Exceptions |
+                    |       +----------------------+        |       +----------------------+
+                    |                                       |
+                    |-> ClassNotFoundException              |->ArithematicException
+                    |-> FileNotFoundException               |->ArrayIndexOutOfBoundsException
+                    |-> IOException                         |->ArrayStoreException
+                    |-> InteruptedException                 |->IllegalThreadStateException
+                    |-> SQLException                        |->ClassCastException
+                    |-> NumberFormatException               |->NullPointerException
+                                                         
+
+    above diagram is showing a good idea about the exceptions found inside java programming language
+
+    Checked Exceptions : These are few types of exceptions which we must have to handle with the use of try and catch block
+    Unchecked exceptions: for these it it not a case that must have to use try catch block
+
+
+heiarchy which should be maintained inside the java :
+
+    before that first learn about heiarchy :
+
+                          Object
+                            /\
+                            ||
+                            ||
+                        Throwable
+                            /\
+                            ||
+                    +------------------------+
+                    /\                      /\
+                    ||                      ||
+                exceptions                errors
+                    |
+                    |-> ClassNotFoundException
+                    |-> IOException
+                    |-> InteruptedException
+                    |-> NumberFormatException
+                    |-> RuntimeExceptions
+                            |
+                            |-> ArrayIndexOutOfBoundsException
+                            |-> ArithematicException
+                            |-> NullPointerException
+                            |
+
+    top to botton we go from heigher level heiarchy to lower level heiarchy
+    also we go from generalised exceptions to specific exceptions
+
+    any heigher level exception can be able to handle all of its lower heiarchical members
+
+    Ex : class Exception which is BuiltIn class inside java can handle any kind of exception inside code
+
+code {
+
+        a) Exception Class handling Arithematic Exception
+
+        try{
+            int a=10,b=0,c;
+
+            c=a/b;
+        }
+        catch(Exception z){
+            System.out.println(z);
+            // java.lang.ArithmeticException: / by zero
+        }
+
+        // b) Exception class handling Array Index Out Of Bounds Exception
+
+        try{
+            int a[]= new int[5];
+            System.out.println("element at position 10 : "+a[10]);
+            
+        }
+        catch(Exception g){
+            System.out.println(g);
+            // java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
+        }
+}
+
+    # how to do heiarchical ordring
+
+    Note : if you dont want be part of heiarchy and all you can use nested try catch block and these are easy to use also
+
+    in multiple catch conditions we can be able to find and we alway go from lower level catch block to heigher level catch block
+    else you will tackle with some kind of error
+
+    ex :
+        try{
+
+        }
+        catch(A){}
+        catch(B){}
+        catch(c){}
+
+        so "A and "B" should be at same level or ("A" should be subclass of "B" or in other words "B" is superclass of "A")
+        else you may end up in some error
+
+        same for "B" and "C" pair
+        so "B" and "C" should be at same level or ("B" should be subclass of "C" or in other words "C" is superclass of "B")
+        else you may end up in some error
+
+    with code:
+
+    so Exception is heigher level class in java and ArithematicException is low level:
+    
+
+code{
+        here we are following heiarchy
+        try{
+            int a=10,b=0,c;
+            try{
+                c=a/b;
+            }
+            catch(ArithmeticException z){
+                System.out.println(z);
+            }
+            int aa[]= new int[5];
+            System.out.println("element at position 10 : "+aa[10]);
+        }
+        catch(ArrayIndexOutOfBoundsException m){
+            System.out.println(m);
+        }
+        catch(ArithmeticException m){
+            System.out.println(m);
+        }
+        catch(Exception z){
+            System.out.println(z);
+            
+        }
+        output :
+        // output :
+        // java.lang.ArithmeticException: / by zero
+        // java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 5
+
+        # heiarchy not maintained
+
+        try{
+            int aa[]= new int[5];
+            System.out.println("element at position 10 : "+aa[10]);
+        }
+        catch(ArrayIndexOutOfBoundsException m){
+            System.out.println(m);
+        }
+        catch(Exception z){
+            System.out.println(z);  
+        }
+        catch(ArithmeticException m){
+            System.out.println("");
+        }
+        // heiarchyOfExceptions.java:77: error: exception ArithmeticException has already been caught
+        // catch(ArithmeticException m){
+        // 1 error
+
+        # another case 
+        
+        try{
+            int aa[]= new int[5];
+            System.out.println("element at position 10 : "+aa[10]);
+        }
+        catch(Exception z){
+            System.out.println(z);    
+        }
+        catch(ArrayIndexOutOfBoundsException m){
+            System.out.println(m);
+        }
+        catch(ArithmeticException m){
+            System.out.println("");
+        }
+        output :
+        heiarchyOfExceptions.java:75: error: exception ArrayIndexOutOfBoundsException has already been caught
+        catch(ArrayIndexOutOfBoundsException m){
+        ^
+        heiarchyOfExceptions.java:78: error: exception ArithmeticException has already been caught
+        catch(ArithmeticException m){
+        ^
+        2 errors
+
+    }
+
+
