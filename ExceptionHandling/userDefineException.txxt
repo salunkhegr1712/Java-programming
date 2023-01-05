@@ -1,0 +1,71 @@
+in this file i will briefly explain the theory part which is related to the userDefined exceptions
+
+    # User-Defined Exceptions  (extending Exception class is mandatory)
+
+    in java everything is a class
+    so exceptions inside java are also classes
+
+    we can able to Define userDefined exceptions using class
+    these the child class of builtIn class Exception and they can also able to overide the functions
+    which present inside the classs Exception
+        
+        functions like getMessage(), toString(), printStackTree()
+        such functions can be used to override the previously declared function inside parent Exception class
+    
+    :
+            inside this code i will briefy explain the three important function inside the Exception class
+        a) String getMessage(); String is returntype of the function
+
+            this function will return the String which contains the exception error message from that object 
+
+        b) String toString();
+            this function is by default function inside the System.out.println("");
+            and which is able to return String for any object provided 
+
+        c) void printStackTree()
+            
+            * printStackTrace uses System.out.println so toString function is must inorder to run printStackTrace
+
+            * this is function which found sometime usefull as it can be used in order to find out in which order the function
+            where called and with this info we can be able to solve some problems  
+
+        if you extend ypur class with Exception so that class is not a Exception
+
+    ex :
+
+    {
+        // lets create a class which extends Class Exception
+        class GhanshamException extends Exception{
+
+            // now lets override function inside predefined exception class
+            public String getMessage(){
+                return "getMessage function from GhanshamException";
+            }
+
+            public String toString(){
+                return "toString function from GhanshamException";
+            }
+
+            public void printStackTree(){
+                System.out.println("printStackTrace function from GhanshamException");
+            }
+
+            // so now we are ready with our new type of exception and it is class
+        }
+
+        // main function of our java code
+        public static void main(String args[]){
+
+        GhanshamException z= new GhanshamException();
+        System.out.println(z.getMessage());
+        System.out.println(z);
+        z.printStackTrace();
+
+        Output :
+        // getMessage function from GhanshamException
+        // toString function from GhanshamException
+        // printStackTrace function from GhanshamException
+    }
+
+
+    }

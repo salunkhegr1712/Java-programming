@@ -5,19 +5,6 @@
 import java.lang.*;
 import java.util.*;
 
-// inside this code i will briefy explain the three important function inside the Exception class
-// a) String getMessage(); String is returntype of the function
-
-    // this function will return the String which contains the exception error message from that object 
-
-// b) String toString();
-    // this function is by default function inside the System.out.println("");
-    // and which is able to return String for any object provided 
-
-// c) void printStackTree()
-    // this is function which found sometime usefull as it can be used in order to find out in which order the function
-    // where called and with this info we can be able to solve some problems  
-
 // the main class
 public class builtInExceptionClass {
 
