@@ -180,3 +180,45 @@ Output :
 
 so even if the no exception occured the try catch  block still very good tool for the exception handling and
 also prevent the code to go through the Exceptions
+
+
+example of checked exception and we must have to handle them with help of the exception handling
+
+{
+
+
+    // import io which can take input from the
+    import java.io.*;
+    // also lets write some code for the exception handling in case of Checked Exception
+    // a example code where we have to handle the checked exception 
+
+    PSV main(){
+       FileInputStream n= new FileInputStream("hell.txt");
+        //this code will create a IOException 
+
+        // unreported exception java.io.FileNotFoundException; must be caught or declared to be thrown
+
+        // as unchecked exception do not make any noise in compilation process 
+        // but checkes exception give error in compilation process itself  
+    }
+    
+    such like that you can be able to access see java exception 
+    
+}   
+    
+    # now how can you handle them
+    main(){
+    // now lets handle it 
+        try{
+        
+            FileInputStream n= new FileInputStream("hell.txt");
+        }
+        catch(IOException z){
+            
+            System.out.println(z);
+            //java.io.FileNotFoundException: hell.txt (No such file or directory)
+            
+        }
+}
+
+after handling checked exception (in this case it is IOException )
