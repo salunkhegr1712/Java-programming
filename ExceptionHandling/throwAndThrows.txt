@@ -118,3 +118,50 @@ ex :
 }
 
 such like that exception propagates
+
+along with that you are able to throw user defined exception also 
+
+* object of UserDefinedException class is a exception
+* class is only blueprint of exception
+
+****     // you should write java.lang.Exception after extends
+{
+    //exception class
+
+    class NegativeDistanceException extends java.lang.Exception{
+
+        // here inside UserDefinedException write function 
+        public String getMessage(){
+            return "you entered a negative length \n\t~ getMessage() from NegativeDistanceException";
+        }
+        public String toString(){
+            return "Bad input!! \n\t~ getMessage() from NegativeDistanceException";
+        }
+    }
+
+    // function
+    static double area(double l, double b) throws NegativeDistanceException{
+        if(l<=0 || b<=0)
+            throw new NegativeDistanceException();
+
+        return l*b; 
+    }
+    // main function 
+    public static void main(String args[]){
+
+        try{
+            area(10,-10);
+        }  
+        catch(NegativeDistanceException m){
+            System.out.println(m.getMessage());
+            System.out.println(m);
+        } 
+    }
+    output :
+    
+        you entered a negative length 
+                 ~ getMessage() from NegativeDistanceException
+        Bad input!! 
+                 ~ getMessage() from NegativeDistanceException
+}
+

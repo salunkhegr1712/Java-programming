@@ -2,6 +2,10 @@ in this file i will briefly explain the theory part which is related to the user
 
     # User-Defined Exceptions  (extending Exception class is mandatory)
 
+    * object of UserDefinedException class is a exception
+    * class is only blueprint of exception
+
+
     in java everything is a class
     so exceptions inside java are also classes
 
