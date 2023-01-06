@@ -1,0 +1,120 @@
+inside these file i will explain use of throw and throws keyword inside java also in details i will explain the code for it
+
+with help these to keyword you can built user defined exception throwing and further use userdefined exception and exception throwing
+
+# throw :
+    this keyword is used in order to throw exception inside a function
+    
+    the throw will equivalent to the return keyword and after getting throw sentense
+    all following line will not excutes just like the return keyword;
+
+    throw and return are similar in some aspects 
+
+# throws :
+    for a function which throw some kind of exception must have to write throws KindOfExceptionYouWantToThrow
+
+    basically throw is used inside the body of a function and throws is used in function signature
+
+while using throw exception you can send message inside the Exception declaration 
+
+Exception z= new Exception("you can write your message here inside this double quotes")
+ex :
+
+following is example for throwing exception (prebuild exception throwing)
+{
+    static double area(double l, double b) throws Exception{
+        if(l<=0 || b<=0)
+            throw new Exception("negative distances provided");
+        
+        else{
+            return l*b;
+        }
+    }
+    or 
+
+    static double area(double l, double b) throws ArithmeticException{
+        if(l<=0 || b<=0)
+            throw new ArithmeticException();
+        
+        else{
+            return l*b;
+        }
+    }
+
+    the type of exception after throw and throws should always be same
+}
+
+if function which throws Exceptions then the caller function must always have to handle the thrown function 
+
+Case:
+
+    * if you write throw but not write throws after function name it will show error like this 
+
+    cannot find symbol
+    symbol:   variable Exception
+    location: class throwAndThrowsInJava
+
+and this will gone after writing throws NameOfExceptionYouThrowing
+
+and after completly writing throws and throw at correct position the caller function must have to handle it 
+as called function is a exception throwing function 
+
+and if caller function also throw exception then it's caller function have to handle the exception
+
+it is a application of exception propagates ..
+
+
+a code to understand throwing and handling
+called function throw exception and caller function will handle exception 
+{
+    static void method(){
+
+        double l=10,b=-10;
+        try{
+           System.out.println("area is : "+area(l,b)); 
+        }
+        catch(Exception m){
+            System.out.println(m);
+        }    
+    } 
+    static double area(double l, double b) throws Exception{
+
+        if(l<=0 || b<=0)
+            throw new Exception("negative distances provided");
+        else{
+            return l*b;
+        }
+    }
+}
+
+here we are using exception handling inside caller function itself you can declare a caller function 
+for throwing exception and exception will propagates after that to caller's caller functions and it same happend then 
+so on...
+
+ex :
+{
+    static double area(double l, double b) throws Exception{
+        if(l<=0 || b<=0)
+            throw new Exception("negative distances provided");
+        else{
+            return l*b;
+        }
+    }
+
+    static void method() throws Exception{
+        double l=10,b=-3;
+        System.out.println("area is : "+area(l,b)); 
+    }
+    public static void main(String args[]){
+        try{
+           method(); 
+        }
+        catch(Exception z){
+            System.out.println(z);
+        }
+    }
+    
+    propagation of exception ==> area() --> method() --> main()
+}
+
+such like that exception propagates
