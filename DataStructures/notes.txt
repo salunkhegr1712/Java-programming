@@ -1,0 +1,78 @@
+                # Stack
+
+A stack is a representation of nodes. There are two components to each node: data and next (storing address of next node).
+Each node’s data portion contains the assigned value, and its next pointer directs the user to the node that has the 
+stack’s subsequent item. The highest node in the stack is referred to as the top. 
+
+# Features of Stack :
+    
+    Linear Data Structures using Java
+    Follows LIFO: Last In First Out
+    Only the top elements are available to be accessed
+    Insertion and deletion takes place from the top
+    Eg: a stack of plates, chairs, etc
+
+# 4 major operations:
+    
+    push(ele) – used to insert element at top
+    pop() – removes the top element from stack
+    isEmpty() – returns true is stack is empty
+    peek() – to get the top element of the stack
+    All operation works in constant time i.e, O(1)
+
+#Stack Advantages :
+    
+    Maintains data in a LIFO manner
+    The last element is readily available for use
+    All operations are of O(1) complexity
+
+# Stack Disadvantages :
+    
+    Manipulation is restricted to the top of the stack
+    Not much flexible
+
+# Stack Applications :
+    
+    Recursion
+    Parsing
+    Browser
+    Editors
+
+
+                # Queue 
+    
+    What is Queue?
+
+The queue is called an abstract data structure. Data is always added to one end (enqueued), and removed from the
+other (dequeue). Queue uses the First-In-First-Out approach and data item that was stored initially will be 
+accessed first in a queue.
+
+# Features of Queue :
+
+        Linear Data Structure
+        Follows FIFO: First In First Out
+        Insertion can take place from the rear end.
+        Deletion can take place from the front end.
+        Eg: queue at ticket counters, bus station
+
+
+# 4 major operations:
+
+    enqueue(ele) – used to insert element at top
+    dequeue() – removes the top element from queue 
+    peekfirst() – to get the first element of the queue 
+    peeklast() – to get the last element of the queue 
+
+    All operation works in constant time i.e, O(1)
+
+#Queue Advantages :
+
+    Maintains data in FIFO manner
+    Insertion from beginning and deletion from end takes O(1) time
+
+#Queue Applications :
+
+    Scheduling
+    Maintaining playlist
+    Interrupt handling
+
