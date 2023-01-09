@@ -17,7 +17,7 @@ class BSTnode{
 }
 // the main class
 public class BSTDataStructure{
-
+    static int m=0;
     // a) inorderTraversal
     static void inOrderTraversal(BSTnode n){
         if(n==null){
@@ -77,7 +77,30 @@ public class BSTDataStructure{
         // System.out.println(val+" insetion done ");
 
     }
+    
+    static int getLevel(BSTnode root,int val){
+        int m=0;
 
+        while(root!=null){
+            
+            if(root.data==val){
+                return m;
+            }
+            else if(val> root.data){
+                root=root.rightChild;
+                m++;
+                // System.out.println("right");
+            }
+            else{
+                root=root.leftChild;
+                m++;
+                // System.out.println("left");
+            }
+        }
+        return m;
+    }
+    
+    // function to search a value inside the tree 
     static void searchInBST(BSTnode root,int val){
 
         while(root!=null){
@@ -100,6 +123,13 @@ public class BSTDataStructure{
         System.out.println("value "+val+"not found");
     }
 
+    // count node
+    // static int print(BSTnode root){
+    //     if(root!=null){
+    //         m=m+1;
+
+    //     }
+    // }
     // main function of our java code
     public static void main(String args[]){
 
@@ -117,6 +147,11 @@ public class BSTDataStructure{
         // inOrderTraversal(root);
         // System.out.println("\npostorder is : ");
         // postOrderTraversal(root);
-        searchInBST(root,50);
+        // searchInBST(root,50);
+        // levelWiseView(root,1,3);
+        System.out.println("");
+        System.out.println(getLevel(root,5));
+        
+
     }
 }
