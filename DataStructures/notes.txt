@@ -1,3 +1,18 @@
+# some important point 
+
+# IMP
+as we know the pointer do not exit so in java each varible is referrence and it itself a pointer 
+you can assign it address of object or a address of a referrence
+               
+to delete a object :
+
+    int a[]=new int[10];
+
+    so just do 
+    a=null;
+
+and all data inside that node will be freed up 
+
                 # Stack
 
 A stack is a representation of nodes. There are two components to each node: data and next (storing address of next node).
@@ -76,3 +91,24 @@ accessed first in a queue.
     Maintaining playlist
     Interrupt handling
 
+
+            #Linked List
+
+    * Linked list data structure helps the required objects to be arranged in a linear order.
+
+    # Linked List Advantages
+    
+    Dynamic in size
+    No wastage as capacity and size is always equal
+    Easy insertion and deletion as 1 link manipulation is required
+    Efficient memory allocation
+
+    # Linked List Disadvantages
+        
+        If head Node is lost, the linked list is lost
+        No random access is possible
+
+    # Linked List Applications
+    
+    Suitable where memory is limited 
+    Suitable for applications that require frequent insertion and deletion
