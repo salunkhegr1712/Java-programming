@@ -112,3 +112,35 @@ accessed first in a queue.
     
     Suitable where memory is limited 
     Suitable for applications that require frequent insertion and deletion
+
+    # Binary Tree
+    
+        In a binary tree, the branches of the tree are made up of up to two child nodes for each node. The left
+        and right nodes are the common names for the two youngsters. Child nodes make references to their parents,
+        whereas parent nodes are nodes with children.
+
+    # Features of Binary Tree
+
+        Hierarchical  Data Structure
+        The topmost element is known as the root of the tree
+        Every Node can have at most 2 children in the binary tree
+        Can access elements randomly using index
+        Eg: File system hierarchy
+
+    # Common traversal methods:
+        preorder(root) : print-left-right
+        postorder(root) : left-right-print 
+        inorder(root) : left-print-right
+
+    # Binary Tree Advantages
+    
+    Can represent data with some relationship
+    Insertion and search are much more efficient
+
+    # Binary Tree Disadvantages
+        
+        Sorting is difficult
+        Not much flexible
+        Binary Tree Applications
+        File system hierarchy
+        Multiple variations of the binary tree have a wide variety of applications
