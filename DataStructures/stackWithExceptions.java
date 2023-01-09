@@ -175,124 +175,124 @@ public class stackWithExceptions {
     }
 }
 
-// output :
-    // enter size of stack : 5
+/* output :
+    enter size of stack : 5
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 1
+    Enter your choice : 1
     
-    // enter value : 10
+    enter value : 10
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 3
+    Enter your choice : 3
     
-    // top of the stack is  : 10
+    top of the stack is  : 10
     
-    // Invalid function
+    Invalid function
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 1
+    Enter your choice : 1
     
-    // enter value : 22
+    enter value : 22
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 1
+    Enter your choice : 1
     
-    // enter value : 65
+    enter value : 65
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 3
+    Enter your choice : 3
     
-    // top of the stack is  : 65
+    top of the stack is  : 65
     
-    // Invalid function
+    Invalid function
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 2
+    Enter your choice : 2
     
-    // enter value : 
-    // popped 65 from stack
+    enter value : 
+    popped 65 from stack
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 2
+    Enter your choice : 2
     
-    // enter value : 
-    // popped 22 from stack
+    enter value : 
+    popped 22 from stack
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 2
+    Enter your choice : 2
     
-    // enter value : 
-    // popped 10 from stack
+    enter value : 
+    popped 10 from stack
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 2
+    Enter your choice : 2
     
-    // enter value : stack is empty i.e. in Underflow condition
-    //                 ~toString() from Underflow
-    // popped -111 from stack
+    enter value : stack is empty i.e. in Underflow condition
+                    ~toString() from Underflow
+    popped -111 from stack
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 2
+    Enter your choice : 2
     
-    // enter value : stack is empty i.e. in Underflow condition
-    //                 ~toString() from Underflow
-    // popped -111 from stack
+    enter value : stack is empty i.e. in Underflow condition
+                    ~toString() from Underflow
+    popped -111 from stack
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 2
+    Enter your choice : 2
     
-    // enter value : stack is empty i.e. in Underflow condition
-    //                 ~toString() from Underflow
-    // popped -111 from stack
+    enter value : stack is empty i.e. in Underflow condition
+                    ~toString() from Underflow
+    popped -111 from stack
     
-    // 1)Push 
-    // 2)Pop 
-    // 3)Peek
-    // 4)Exit
+    1)Push 
+    2)Pop 
+    3)Peek
+    4)Exit
     
-    // Enter your choice : 4
+    // Enter your choice : 4*/
