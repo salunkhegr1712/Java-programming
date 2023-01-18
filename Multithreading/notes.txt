@@ -1,0 +1,121 @@
+you can use predefined interface or predefined class in order to use multuthreading inside java 
+
+a) extending Thread class
+b) implementing Runnable interface
+
+for both method we need Thread class
+
+in class which acts as multithreading then we have to override a function :
+
+    run() // it is a void function
+
+in order to execute run function from multithreading class we have to create its object
+and for that object we have to use 
+
+    start()
+
+    start function will run the code inside run from its class 
+
+and in run function you have to write the logic or code which you want to run for Thread
+
+Thread will create additional control flow which run simultanouly with the original control
+
+    # multithreading using Thread class
+
+code{
+
+    // declare a class extending Thread class
+    class MyThread extends Thread{
+        
+        // now write the code for run function in java 
+        public void run(){
+            int i=0;
+            while(i<100){
+                System.out.println(i+" hello ");
+                i++;
+            }
+        }
+    }
+
+    // the main class
+    public class multiThreading {
+
+        // main function of our java code
+        public static void main(String args[]){
+
+            // now lets create a object for the multiThreaded class
+            MyThread m= new MyThread();
+
+            // now use start function
+            m.start();
+
+            int k=0;
+            while(k<100){
+                System.out.println(k+" world ");
+                k=k+1;
+            }
+
+        }    
+    }
+    output :
+    original thread 0 world 
+    additional thread : 0 hello 
+    original thread 1 world 
+    additional thread : 1 hello 
+    original thread 2 world 
+    additional thread : 2 hello 
+    original thread 3 world 
+    additional thread : 3 hello 
+    original thread 4 world 
+    additional thread : 4 hello 
+}
+
+you can create main class as multiThreaded class also :
+
+code{
+
+    // the main class
+    public class multiThreading extends Thread{
+
+        // now write the code for run function in java 
+        public void run(){
+            
+            // you have to write all code which sholuld be run by additional thread inside run function
+            int i=0;
+            while(i<100){
+                System.out.println(i+" hello ");
+                i++;
+            }
+        }
+
+        // main function of our java code
+        public static void main(String args[]){
+
+            // now lets create a object for the multiThreaded class
+            multiThreading m= new multiThreading();
+
+            // now use start function
+            m.start();
+
+            // now write some code inside the main 
+            int k=0;
+            while(k<100){
+                System.out.println(k+" world ");
+                k=k+1;
+            }
+        }
+        // sample output 
+
+        original thread 0 world 
+        additional thread : 0 hello 
+        original thread 1 world 
+        additional thread : 1 hello 
+        original thread 2 world 
+        additional thread : 2 hello 
+        original thread 3 world 
+        additional thread : 3 hello 
+        original thread 4 world 
+        additional thread : 4 hello  
+
+    }
+}
