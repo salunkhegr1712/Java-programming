@@ -1,0 +1,61 @@
+# Methods of Thread Class
+    In java.lang.Thread class, several constructors have been declared for different purposes.
+    Some of them are:
+
+    Thread(): no-argument constructor.
+    Thread (String name): takes a string as an argument.
+    Thread(Runnable r): takes reference (r) of a Runnable object as an argument.
+    Thread(*Runnable r, String r): takes reference (r) of a Runnable object as well as a string as arguments.
+
+# method table
+
+    Method Name	                                                        Usage
+
+    public void run()	                                    used to act as a thread.
+
+    public void start()	                                  used to start execution for a thread.
+
+    public void sleep(long milliseconds)	            used to temporarily terminate the invoking thread's execution 
+                                                            for a specified duration of time.
+
+    public void join()	                                        used to wait for a thread to die.
+
+    public void join(long milliseconds)	                used to wait for a thread to die for a specified duration of time.
+    
+    public int getPriority()	                            used to get the priority of the thread.
+    
+    public int setPriority(int priority)	                used to set or change the priority of the thread.
+    
+    public String getName()	                                    used to get the name of the thread.
+    
+    public void setName(String name)	                    used to set or change the name of the thread.
+    
+    public Thread currentThread()	                    used to get the reference of currently executing thread.
+    
+    public int getId()	                                        used to get the id of the thread.
+    
+    public Thread. State getState()	                                used to get the state of the thread.
+    
+    public boolean isAlive()	                                    used to check if the thread is alive or not.
+    
+    public void yield()	                                    used to temporarily pause the currently executing thread and 
+                                                                            allow other threads to execute.
+    
+    public void stop()	                                         used to check if the thread is a daemon thread.
+    
+    public boolean isDaemon()	                                    used to mark the thread as daemon thread.
+    
+    public void setDaemon(boolean b)	                        used to mark the thread as daemon or user thread.
+    
+    public void interrupt()	                                            used to make interrupts to the thread.
+    
+    public boolean isInterrupted()	                                used to check if the current thread has been 
+                                                                                interrupted or not.
+    
+    public static boolean interrupted()	                                used to check if the current thread has been
+                                                                                interrupted or not.
+
+
+we can use those function in many case
+
+are :

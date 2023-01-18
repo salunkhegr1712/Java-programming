@@ -61,12 +61,29 @@ public class priorityThreads extends Thread {
         // priority of main : 5
 
         // now lets set priority for main and then check priority
-        m.setPriority(10);
+        m.setPriority(1);
         System.out.println("priority of main is : "+m.getPriority());
         // priority of main is : 10
 
         // function to get active count 
         System.out.println("active count : "+ Thread.activeCount());
         // active count : 4
+        
+        // we can use getName function to get name of the thread 
+        System.out.println("name of thread : "+m.getName());
+        // name of thread : main
+
+        // with the use of setName() function we can get the name of the thread 
+        m.setName("ghansham");
+        System.out.println("name of thread : "+m.getName());
+        // name of thread : ghansham
+
+        // also we can get the id for the thread 
+        System.out.println("id is : "+m.getId());
+        
+        // you cant set the id for the thread 
+        
+        
+
     }
 }
