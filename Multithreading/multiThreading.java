@@ -18,6 +18,8 @@ class MyThread extends Thread{
 }
 
 // now use a interface
+// for not known reason i cant use interface here
+
 
 // the main class
 public class multiThreading extends Thread{

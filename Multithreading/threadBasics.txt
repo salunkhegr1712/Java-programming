@@ -1,0 +1,102 @@
+    # states of threads
+
+    state means current form of the object
+
+for a thread it can be states like :
+
+    a) new
+    
+    When an instance of the Thread class is created a new thread is born and is known to be in New-born state.
+    That is, when a thread is born, it enters into new state but its execution phase has not been started yet 
+    on the instance.
+
+    In simpler terms, Thread object is created but it cannot execute any program statement because it is not in an 
+    execution state of the thread. Only start() method can be called on a new thread; otherwise, an IllegalThreadStateException 
+    will be thrown.
+
+    b) ready State
+
+    The second phase of a new-born thread is the execution phase. When the start() method is called on a the new instance of a thread,
+    it enters into a runnable state. In the runnable state, thread is ready for execution and is waiting for availability of 
+    the processor (CPU time). There are many threads that are ready for execution, they all are waiting in a queue (line).
+
+    If all threads have equal priority, a time slot is assigned for each thread execution on the basis of first-come, 
+    first-serve manner by CPU. The process of allocating time to threads is known as time slicing. A thread can come into 
+    runnable state from running, waiting, or new states.
+
+    c) Running State
+
+    Running means Processor (CPU) has allocated time slot to thread for its execution. When thread scheduler selects a thread 
+    from the runnable state for execution, it goes into running state. Look at the above figure.
+    
+    In running state, processor gives its time to the thread for execution and executes its run method. It is the state 
+    where thread performs its actual functions. A thread can come into running state only from runnable state.
+
+    A running thread may give up its control in any one of the following situations and can enter into the blocked state.
+
+    When sleep() method is invoked on a thread to sleep for specified time period, the thread is out of queue during this time period.
+    The thread again reenters into the runnable state as soon as this time period is elapsed.
+
+    When a thread is suspended using suspend() method for some time in order to satisfy some conditions. A suspended thread can
+    be revived by using resume() method.
+    When wait() method is called on a thread to wait for some time. The thread in wait state can be run again using notify() or 
+    notifyAll() method.
+
+    d) Blocked State
+    
+    A thread is considered to be in the blocked state when it is suspended, sleeping, or waiting for some time in order to 
+    satisfy some condition.
+
+    e) Dead State
+    
+    A thread dies or moves into dead state automatically when its run() method completes the execution of statements. That is, 
+    a thread is terminated or dead when a thread comes out of run() method. A thread can also be dead when the stop() method is called.
+
+    During the life cycle of thread in Java, a thread moves from one state to another state in a variety of ways. This
+    is because in multithreading environment, when multiple threads are executing, only one thread can use CPU at a time.
+
+    All other threads live in some other states, either waiting for their turn on CPU or waiting for satisfying some conditions.
+    Therefore, a thread is always in any of the five states.
+
+
+    # priority of Threads (Thread Priority)
+
+    Each thread has a priority. Priorities are represented by a number between 1 and 10. In most cases, the thread scheduler
+    schedules the threads according to their priority (known as preemptive scheduling). But it is not guaranteed because it 
+    depends on JVM specification that which scheduling it chooses. Note that not only JVM a Java programmer can also assign 
+    the priorities of a thread explicitly in a Java program.
+
+
+    * Setter & Getter Method of Thread Priority
+    
+    Let's discuss the setter and getter method of the thread priority.
+
+    public final int getPriority(): 
+    The java.lang.Thread.getPriority() method returns the priority of the given thread.
+    
+    public final void setPriority(int newPriority):
+    The java.lang.Thread.setPriority();
+    method updates or assign the priority of the thread to newPriority. The method throws IllegalArgumentException
+    
+    value of priorities 
+    if the value newPriority goes out of the range, which is 1 (minimum) to 10 (maximum).
+
+    # 3 constants defined in Thread class:
+
+    public static int MIN_PRIORITY : 1
+    public static int NORM_PRIORITY : 5
+    public static int MAX_PRIORITY : 6 
+    
+    * Default priority of a thread is 5 (NORM_PRIORITY). 
+
+
+    if you want to find out current thread use 
+
+    Thread.currentThread()
+
+    for original thread means thread which enters through main has name main and its priority is 5
+
+    ex : Thread.currentThread().getPriority()
+
+    you can manipulate its value also for main thread too
+

@@ -13,6 +13,7 @@ in order to execute run function from multithreading class we have to create its
 and for that object we have to use 
 
     start()
+    if you use multiple start you may tackle some errors 
 
     start function will run the code inside run from its class 
 
@@ -31,7 +32,7 @@ code{
         public void run(){
             int i=0;
             while(i<100){
-                System.out.println(i+" hello ");
+               System.out.println("additional thread "+i+" hello ");
                 i++;
             }
         }
@@ -51,7 +52,7 @@ code{
 
             int k=0;
             while(k<100){
-                System.out.println(k+" world ");
+                System.out.println("original thread "+i+" hello ");
                 k=k+1;
             }
 
@@ -83,7 +84,7 @@ code{
             // you have to write all code which sholuld be run by additional thread inside run function
             int i=0;
             while(i<100){
-                System.out.println(i+" hello ");
+                System.out.println("additional thread "+i+" hello ");
                 i++;
             }
         }
@@ -100,7 +101,7 @@ code{
             // now write some code inside the main 
             int k=0;
             while(k<100){
-                System.out.println(k+" world ");
+                System.out.println("original thread "+i+" hello ");
                 k=k+1;
             }
         }
@@ -119,3 +120,40 @@ code{
 
     }
 }
+
+    # multi Threading with Runnable interface
+
+    written only example for creating a external class and then using it in main class as 
+    multiThreading you can also able to declare main function which implements interface
+
+code{
+
+    class MyRunnable implements Runnable
+    {
+        public void run()
+        {
+            int i=1;
+            while(true)
+            {
+                System.out.println("additional thread "+i+" hello ");
+                i++;
+            }
+        }
+    }
+    public static void main(String[] args) {
+        
+        //MyThread t=new MyThread();
+        //ThreadTest t=new ThreadTest();
+        MyRunnable t=new MyRunnable();
+        Thread th=new Thread(t);
+        
+        th.start();
+        
+        int i=1;
+        while(true)
+        {
+            System.out.println("original thread "+i+" hello ");
+        }
+        
+    }
+} 
