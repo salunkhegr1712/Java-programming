@@ -17,7 +17,7 @@ class MyThread1 extends Thread{
     public void run(){ 
         
         data.display("hello_world");
-  
+        
     }
 }
 
@@ -34,30 +34,29 @@ class MyThread2 extends Thread{
     @Override
     public void run(){
         testCode m= new testCode();
-        m.display("welcome");
+        data.display("welcome");
     }
-    
 }
-
 
 // the main class
 public class testCode {
 
-    testCode data;
      // lets declare a function which print each character inside string 
     synchronized void display(String a){
 
         // synchronized block 
-        // synchronized(this){
-        // // we are going to use length function to calculate the length of the string in java
-        // for(int i=0;i<a.length();i++){
-        //     System.out.print(a.charAt(i));
-        // }
-        // System.out.println();
-        // }
+        synchronized(this){
+        // we are going to use length function to calculate the length of the string in java
         for(int i=0;i<a.length();i++){
             System.out.print(a.charAt(i));
         }
+        // System.out.println();
+        }
+        // for(int i=0;i<a.length();i++){
+        //     System.out.print(a.charAt(i));
+        //     try{Thread.sleep(1000);}catch(Exception e){};
+
+        // }
     }
 
     // main function of our java code
