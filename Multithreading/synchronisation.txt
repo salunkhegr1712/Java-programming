@@ -1,0 +1,30 @@
+# for synchronisation you can do it synchronisation block or synchronised function
+
+synchronised block :
+
+    // this will act as specifying so that function enclosed by this block will be a 
+    synchronized block
+
+    synchronised(this){
+
+        code ;
+    }
+
+    // you cant use the synchronized block for nonstatic class 
+
+now even multiple thread want to access the code inside tht synchronised block at a same time one
+thread can use it and other will wait until first not completly executed and such how you can be able
+to do synchronisation using synchronised block
+
+
+synchronised function/method :
+
+    synchronised void display(){
+        code ;
+    }
+
+you can also able to make a whole function as the synchronised function.
+
+when a thread is already using this function other have to wait until first is not get fulley executed
+
+thus how with monitor you can attempt coordination using synchronisation
