@@ -64,23 +64,47 @@ public class ThreadMethods extends Thread{
         // z.interrupt();
         // System.out.println(z.isInterrupted());// true
         
-        // z.setDaemon(true);
-        // System.out.println(z.isDaemon()); //true
+        // get current thread 
+        Thread current =Thread.currentThread();
+        z.setDaemon(true);
+        System.out.println(z.isDaemon()); //true
+        try{
+            z.start();
+            current.join();
+            // true
+            // daemon thread
+        // id : 12 name : Thread-0  priority : 9 state : RUNNABLE thread group : java.lang.ThreadGroup[name=main,maxpri=10]
+        
+        }
+        catch(Exception zzp){
+        
+        }
+        
         
         // now lets use see our additional thread has priority 9
         z.start();
+
+        // you have to use the sleep function inside the try catch block 
+        // sleep function is used in order to stop working of thread for a time
+        // which you sent as parameter
+        // try{
+        //     // thread.yield(z);
+
+        //     Thread.sleep(10000);
+        // }
+        // catch(Exception a){
+            
+        // }
+        
         System.out.println("hello world");
-        // get current thread 
-        Thread current =Thread.currentThread();
 
         // lets print activeCount() of thread 
         System.out.println("active thread : "+Thread.activeCount());
         // active thread : 2
         // current.yield();
-        Thread.dumpStack(); //this is same function like getStackTrace in exceptions 
+        // Thread.dumpStack(); //this is same function like getStackTrace in exceptions 
         // java.lang.Exception: Stack trace
         // at java.base/java.lang.Thread.dumpStack(Thread.java:1383)
         // at ThreadMethods.main(ThreadMethods.java:80)
-    
     }   
 }
