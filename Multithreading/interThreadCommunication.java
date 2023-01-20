@@ -20,12 +20,13 @@ class Producer extends Thread{
     public void run(){
         int j=0;
         // producer will set value 
-        while(true){
-            if(m.count==0){
-                m.setValue(j);
-                System.out.println("value set : "+(j++));
-            }
-
+        while(j<100){
+            // if(m.count==0){
+            //     m.setValue(j);
+            //     System.out.println("value set : "+(j++));
+            // }
+            m.setValue(j);
+            System.out.println("value set : "+(j++));
         }
     }
 
@@ -47,13 +48,14 @@ class Consumer extends Thread{
     public void run(){
         
         // consumer will read value
-        // int j=0;
-        while(true){
-            if(m.count==1){
+        int j=0;
+        while(j<100){
+            // if(m.count==1){
                 
-                System.out.println("got value : "+m.getValue());
-            }
-            
+            //     System.out.println("got value : "+m.getValue());
+            // }
+            System.out.println("got value : "+m.getValue());
+            j++;
         }
     }
 
@@ -64,17 +66,27 @@ public class interThreadCommunication {
 
     // it has a value 
     public int value;
-    public int count=0;
+    public int count;
 
     // now get and set function for these value 
     synchronized public void setValue(int v){
-        count=1;
+
+        while(count!=0){
+            try{wait(1000);}catch(Exception m){};
+        }
         value=v;
+        count=1;
+        // notify() is keyword to notify something to thread
+        notify();
     }
 
     synchronized public int getValue(){
-        count=0;
-        return value;
+        while(count!=1){
+            try{wait(1000);}catch(Exception m){};
+        }
+            count=0;
+            notify();
+            return value;
     }
 
     // main function of our java code
