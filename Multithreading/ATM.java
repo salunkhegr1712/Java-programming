@@ -23,12 +23,18 @@ class Customer extends Thread{
 
     // now we are going to write run function where we can see balance and decide how much we have to withdraw or deposit 
 
+    void useATM(){
+        synchronized(this){
+        atm.checkBalance(this);
+        atm.withdraw(this,1000);
+        atm.deposit(this,9000);
+
+        }
+    }
     @Override
     public void run(){
-        synchronized(this){
-            atm.checkBalance(this);
-            atm.withdraw(this,1000);
-        }
+        
+            useATM();
         
         // int m=0,money=0;
         
